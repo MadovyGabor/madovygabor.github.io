@@ -7,6 +7,7 @@ body {
 }
 
 .container {
+    max-height: fit-content;
     flex: 1; /* Allow container to take remaining space */
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@ h1 {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .card {
         width: 100%; /* Make cards take full width on mobile */
         margin: 10px 0; /* Adjust margin for spacing */
@@ -91,6 +92,12 @@ h1 {
     }
     .card-text {
         font-size: 2em; /* Adjust text size for mobile */
+    }
+}
+
+@media (max-width: 400px) {
+    h1{
+        font-size: 35px;
     }
 }
 
