@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+footer {
+    background-color: #5d6064; /* Dark background color for the footer */
+    color: #fff; /* White text color */
+    padding: 30px; /* Add padding for breathing space */
+    text-align: center; /* Center-align text */
+    border-top: 3px solid #dee2e6; /* Add a border on top */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 20px 20px 0 20px;
+}
+
+.container .header {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.container .header .title {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px; /* Add space between title and nav buttons */
+}
+
+.container .header h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+    margin: 0;
+}
+
+.container .header h3 span {
+    font-weight: 100;
+}
+
+.container .header .subtitle {
+    font-size: 2em; /* Increased font size */
+    margin-top: 30px; /* Increased space between title and subtitle */
+}
+
+.container .header .nav-buttons {
+    display: flex;
+    gap: 20px;
+    align-self: center; 
+}
+
+.container .header .nav-buttons .button {
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.container .header .nav-buttons .button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.container .header .nav-buttons .button:hover::after {
+    width: 100%;
+}
+
+.container .header .nav-buttons .button.active::after {
+    width: 100%;
+}
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* index*/
+
+.profile-section {
+    text-align: center;
+    margin: 10px 0;
+}
+.profile-picture {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+  }
+
+.profile-picture img {
+    width: 100%; /* Make the profile picture span the full width */
+    max-width: 100%; /* Ensure the picture doesn't exceed its original width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.profile-name {
+    margin-top: 20px; /* Add some space between the profile picture and the name */
+    
+}
+
+.career-section {
+    text-align: left;
+    margin-top: 20px; /* Add some space between the profile name and career section */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Index */
+
+/* Galery style */
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    position: relative;
+}
+
+.container .box .dream img {
+    width: 100%;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    transition: transform 1s ease;
+}
+
+.container .box .dream img:hover {
+    transform: scale(1.02);
+}
+
+/* Galery style ends */
+
+@media only screen and (max-width: 769px) {
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .dream {
+        width: 100%;
+    }
+}
+
+/* Your existing CSS */
+@media only screen and (max-width: 650px) {
+    .container .header {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+    .container .header .title {
+        order: -1; /* Move the title to the top */
+        margin-bottom: 20px; /* Add some space between title and buttons */
+    }
+
+    .container .header .nav-buttons {
+        align-self: center;
+    }
+
+    .container .header .nav-buttons .button {
+        margin: 0 5px; /* Add some space between buttons */
+    }
+    footer{
+        padding: 20px;
+    }
+
+    .container .header .title .titleIndex{
+        font-size: 0.7em;
+        margin-bottom: 10px; /* Add some space between title and buttons */
+    }
+
+    .profile-picture {
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+      }
+}
+
+/* Your existing CSS */
+.container .header {
+    background-color: #dddbdb; /* Light background color for the header */
+    padding: 20px; /* Add padding for breathing space */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.container .header .title {
+    font-size: 0.8em;
+    margin-bottom: 20px; /* Add some space between title and buttons */
+}
+
+
+
+.container .header .nav-buttons {
+    align-self: center;
+}
+
+
