@@ -1,45 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azahriah Puskás Stadion - Foto Galéria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bemutatkozás</title>
+    <link rel="stylesheet" href="indexStyles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="title">
-                <div class="titleIndex">
-                    <h3><span>Üdvözöllek a </span>fotó galériámban</h3>
-                </div>
+            <h1>Üdvözöllek az oldalamon!</h1>
+        </div>
+        <div class="cardsContainer">
+            <div class="card photo" onclick="navigateTo('photo.html')">
+                <img src="pictures/index/photography.jpg" alt="Fotós">
+                <div class="card-text">Fotózás</div>
             </div>
-            <div class="nav-buttons">
-                <a href="index.html" class="button active">Kezdőoldal</a>
-                <a href="gallery.html" class="button">Albumok</a>
-                <a href="AzahriahPuskasArena.html" class="button">Elérhetőségek</a>
+            <div class="card it" onclick="navigateTo('it.html')">
+                <img src="pictures/index/it.jpg" alt="Informatikus">
+                <div class="card-text">Informatika</div>
             </div>
         </div>
-        <div class="box">
-            <div class="profile-section" id="profile-picture">
-                <div class="profile-picture">
-                    <img src="/placeholder.jpg" alt="Your Picture">
-                    <div class="Name">Madovy Gabor</div>
-                </div>
-                <div class="career-section">
-                    <h2>My Career</h2>
-                    <p>Your career description goes here. You can write about your achievements, experiences, and anything else you'd like to share about your career.</p>
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>    
-
-
-<footer>
-    <p>© 2024 Madový Gábor</p>
-</footer>
-</body>
+    </div>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 </html>

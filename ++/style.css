@@ -158,14 +158,12 @@ footer {
 .container .box .dream img:hover {
     transform: scale(1.02);
 }
-
 /* Galery style ends */
 
 @media only screen and (max-width: 769px) {
     .container .box {
         flex-direction: column;
     }
-
     .container .box .dream {
         width: 100%;
     }
