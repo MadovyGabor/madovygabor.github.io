@@ -85,13 +85,15 @@ section{
 .aboutMeSection .aboutMeText{
     width: 50%;
     align-items: center;
-    text-align: start; /* Szöveg középre igazítása */ 
+    text-align: start; 
 }
 
 .aboutMeSection img{
     width: 30%;
-    height: 30%;
+    height: auto; /* Maintain aspect ratio */
     margin: auto; /* Centers the picture in the remaining space */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
 }
 
 .aboutMeHeader {
@@ -105,4 +107,87 @@ section{
     align-items: center; /* Függőleges igazítás */
 }
 
+.galleryPrevSection img{
+    width: 30%;
+    height: 30%;
+}
+
+.galleryPrevSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between images */
+    position: relative; /* For positioning arrows */
+}
+
+.galleryImage {
+    width: 30%;
+    height: auto;
+    transition: none; /* Remove hover effect */
+}
+
+.galleryImage.middle {
+    width: 40%; /* Make the middle image larger */
+    transform: none; /* Remove hover scaling */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.galleryButtons {
+    margin-top: 20px;
+}
+
+.galleryButtons .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.galleryButtons .button:hover {
+    background-color: #0056b3;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    border-radius: 12px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
 
