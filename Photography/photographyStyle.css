@@ -1,0 +1,108 @@
+body{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+header{
+    display: flex;
+    overflow: hidden;
+    background-color: silver;
+    border-radius: 12px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Biztosítja, hogy a padding és border beleszámítson a szélességbe */
+    margin-bottom: 20px;
+}
+
+header h3{
+    font-size: 2em;
+}
+
+header .title{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+header .navButtons{
+    display: flex;
+    gap: 20px;
+    align-self: center; 
+    margin-left: auto; 
+    flex-wrap: wrap; /* Új sorba helyezi a gombokat, ha nem férnek el */
+    max-width: 100%; /* Megakadályozza, hogy a navigációs sáv túlnyúljon */
+}
+
+section{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mottoSection {
+    display: flex; /* A mottó és a kép egymás mellé helyezése */
+    align-items: center; /* Függőleges igazítás középre */
+    gap: 20px; /* Távolság a mottó és a kép között */
+    box-sizing: border-box;
+}
+.mottoSection .motto {
+    width: 50%;
+    align-items: center;
+    text-align: center; /* Szöveg középre igazítása */
+    overflow-wrap: break-word; /* Megakadályozza a szöveg túlfutását */
+    word-wrap: break-word; /* Alternatív túlfutás-kezelés */
+}
+
+.mottoSection .motto h2 {
+    font-size: 30px;
+    line-height: 1.8; /* Növeli a sorok közötti távolságot */
+    margin-top: 10px; /* Extra margó a <br> után */
+    text-indent: -40px; /* Kevésbé beljebb kezdés a <br> után */
+}
+
+.mottoSection .pictureAboutMe{
+    width: 30%;
+    height: 30%;
+    margin: auto; /* Centers the picture in the remaining space */
+}
+
+.aboutMeSection{
+    display: flex; /* Az "Én" szekció és a szöveg egymás mellé helyezése */
+    flex-direction: column; /* A szekció elemei egymás alá kerülnek */
+}
+
+.aboutMeSection h1{
+    font-size: 2em;
+}
+
+.aboutMeSection p{
+    font-size: 24px;
+}
+
+.aboutMeSection .aboutMeText{
+    width: 50%;
+    align-items: center;
+    text-align: start; /* Szöveg középre igazítása */ 
+}
+
+.aboutMeSection img{
+    width: 30%;
+    height: 30%;
+    margin: auto; /* Centers the picture in the remaining space */
+}
+
+.aboutMeHeader {
+    width: 100%; /* Teljes szélességet foglal el */
+    margin-bottom: 20px; /* Távolság a tartalom alatt */
+}
+
+.aboutMeContent {
+    display: flex; /* A szöveg és a kép egymás mellé helyezése */
+    gap: 20px; /* Távolság a szöveg és a kép között */
+    align-items: center; /* Függőleges igazítás */
+}
+
+
