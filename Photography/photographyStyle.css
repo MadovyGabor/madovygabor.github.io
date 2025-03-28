@@ -263,5 +263,29 @@ footer{
     transition: transform 1s ease;
 }
 
+/*Contacts page*/
+
+.contactsSection .contactsText {
+    width: 100%;
+    align-items: center;
+    text-align: center; /* Horizontally center text */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.contactsSection .contactsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    
+}
+
+.contactsSection .contacts{
+    width: 50%;
+}
+
+
+
+
 
 
