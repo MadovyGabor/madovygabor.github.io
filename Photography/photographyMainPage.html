@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Introduction</title>
     <link rel="stylesheet" href="photographyStyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -26,6 +27,21 @@
 
         <div class="motto">
             <h2>Az emlékek halványulnak,<br> a képek megmaradnak.</h2>
+            <h3>
+                Szenvedélyem a pillanatok megörökítése, legyen szó portrékról, eseményekről vagy egyedi fotózási ötletekről. 
+                Ha minőségi, természetes és őszinte képeket szeretnél, jó helyen jársz!
+            </h3>
+            <div>
+                <i class="material-icons">location_on</i>
+                <p>Galánta - Újvár - Dunaszerdahely</p>
+                <a href="https://www.instagram.com" target="_blank" class="icon-link">
+                    <i class="material-icons">photo_camera</i>
+                </a>
+                <a href="contacts.html" class="icon-link">
+                    <i class="material-icons">mail</i>
+                </a>
+            </div>
+            
         </div>
 
         <img src="\pictures\kezdoOldal\kepRolamTemp.jpg" alt="Kép rólam" class="pictureAboutMe">
@@ -34,14 +50,12 @@
 
     <section class="aboutMeSection">
 
-        <div class="aboutMeHeader">
-            <h1>RÓLAM</h1>
-        </div>
-
-        <div class="aboutMeContent">
+        
             <div class="aboutMeText">
-                <p>
-                    Szia, Gábor vagyok, fiatal fotós, akit mindig is lenyűgözött a pillanatok megörökítése. 
+                <h1>
+                    Szia, Gábor vagyok, fiatal fotós, akit mindig is lenyűgözött a pillanatok megörökítése.
+                </h1>
+                <p> 
                     Már régóta fotózom, de mostanra kezdtem el professzionális szinten is foglalkozni vele. 
                     Ez nem jelenti azt, hogy kezdő vagyok épp ellenkezőleg, minden egyes képnél arra törekszem, hogy a lehető legjobb minőséget nyújtsam.
                 </p>
@@ -52,10 +66,10 @@
                 </p>
 
             </div>
-
-            <img src="/pictures/kezdoOldal/aboutMePicture.jpg" alt="Egy kep rolam">
-
-        </div>
+            <div class ="aboutMePicture">
+                <img src="/pictures/kezdoOldal/aboutMePicture.jpg" alt="Egy kep rolam">
+            </div>   
+            
     </section>
 
     <section class="servicesSection">
@@ -82,30 +96,27 @@
     </section>
 
     <section class="whyChooseMeSection">
-        <div class="whyChooseMeHeader">
-            <h1>Miért válassz engem?</h1>
+    <div class="whyChooseMeHeader">
+        <h1>Miért válassz engem?</h1>
+    </div>
+    <div class="whyChooseMeContent">
+        <div class="whyChooseMeItem">
+            <i class="material-icons">verified</i>
+            <h2>Garantált Minőség</h2>
+            <p>Garantálom, hogy a legjobb minőséget nyújtom, és minden fontos pillanatot megörökítek.</p>
         </div>
-        <div class="whyChooseMeContent">
-            <div class="whyChooseMeItem odd">
-                <div class="text">
-                    <h2>Garantált Minőség</h2>
-                    <p>Garantálom, hogy a legjobb minőséget nyújtom, és minden fontos pillanatot megörökítek.</p>
-                </div>
-            </div>
-            <div class="whyChooseMeItem even">
-                <div class="text">
-                    <h2>Barátságos Légkör</h2>
-                    <p>Barátságos és nyugodt légkört teremtek a fotózás során, hogy természetes és önazonos képek készüljenek.</p>
-                </div>
-            </div>
-            <div class="whyChooseMeItem odd">
-                <div class="text">
-                    <h2>Rugalmasság</h2>
-                    <p>Rugalmas vagyok, és mindig nyitott vagyok új ötletekre és egyedi kérésekre.</p>
-                </div>
-            </div>
+        <div class="whyChooseMeItem middle">
+            <i class="material-icons">mood</i>
+            <h2>Barátságos Légkör</h2>
+            <p>Barátságos és nyugodt légkört teremtek a fotózás során, hogy természetes és önazonos képek készüljenek.</p>
         </div>
-    </section>
+        <div class="whyChooseMeItem">
+            <i class="material-icons">autorenew</i>
+            <h2>Rugalmasság</h2>
+            <p>Rugalmas vagyok, és mindig nyitott vagyok új ötletekre és egyedi kérésekre.</p>
+        </div>
+    </div>
+</section>
 
     <section class="galleryPrevSection">
 
@@ -120,7 +131,7 @@
             <button class="arrow right-arrow" onclick="moveRight()">&#10095;</button>
         </div>
         <div class="galleryButtons">
-            <a href="portfolio.html" class="button">View Full Gallery</a>
+            <a href="portfolio.html" class="button">Nézd meg a teljes galériámat</a>
         </div>
     </section>
 
