@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
 body{
+    font-family: 'Crimson Pro', serif;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -6,6 +10,7 @@ body{
     text-align: left;
 }
 
+/*Header*/
 header{
     display: flex;
     overflow: hidden;
@@ -13,12 +18,13 @@ header{
     border-radius: 12px;
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; /* Biztosítja, hogy a padding és border beleszámítson a szélességbe */
+    box-sizing: border-box;
     margin-bottom: 20px;
 }
 
 header h3{
     font-size: 2em;
+    font-family: 'Overpass', serif;
 }
 
 header .title{
@@ -32,8 +38,35 @@ header .navButtons{
     gap: 20px;
     align-self: center; 
     margin-left: auto; 
-    flex-wrap: wrap; /* Új sorba helyezi a gombokat, ha nem férnek el */
-    max-width: 100%; /* Megakadályozza, hogy a navigációs sáv túlnyúljon */
+    flex-wrap: wrap; 
+    max-width: 100%; 
+}
+
+header .navButtons .button {
+    font-family: 'Overpass', sans-serif;
+    text-decoration: none; 
+    position: relative; 
+    color: black; 
+    font-size: 16px;
+}
+
+header .navButtons .button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.3s ease;
+}
+
+header .navButtons .button:hover::after {
+    width: 100%; 
+}
+
+header .navButtons .button.active::after {
+    width: 100%; 
 }
 
 section{
@@ -42,44 +75,106 @@ section{
     box-sizing: border-box;
 }
 
+/*First section on the main page (Motto)*/
+
 .mottoSection {
-    display: flex; /* A mottó és a kép egymás mellé helyezése */
-    align-items: center; /* Függőleges igazítás középre */
-    gap: 20px; /* Távolság a mottó és a kép között */
-    box-sizing: border-box;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 40px; 
+    background-color: #f5f5f5; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
+
 .mottoSection .motto {
-    width: 50%;
-    align-items: center;
-    text-align: center; /* Szöveg középre igazítása */
-    overflow-wrap: break-word; /* Megakadályozza a szöveg túlfutását */
-    word-wrap: break-word; /* Alternatív túlfutás-kezelés */
+    width: 60%; 
+    text-align: left; 
 }
 
 .mottoSection .motto h2 {
-    font-size: 30px;
-    line-height: 1.8; /* Növeli a sorok közötti távolságot */
-    margin-top: 10px; /* Extra margó a <br> után */
-    text-indent: -40px; /* Kevésbé beljebb kezdés a <br> után */
+    font-family: 'Crimson Pro', serif; 
+    font-size: 3em; 
+    line-height: 1.3; 
+    margin-bottom: 20px; 
+    color: #000000; 
 }
 
-.mottoSection .pictureAboutMe{
-    width: 30%;
-    height: 30%;
-    margin: auto; /* Centers the picture in the remaining space */
+.mottoSection .motto h3 {
+    font-size: 1.4em; 
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+    color: #555; 
 }
+
+.mottoSection .motto div {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-top: 10px; 
+}
+
+.mottoSection .motto div img {
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain; 
+}
+
+.mottoSection .motto div p {
+    font-size: 1.2em; 
+    color: #777777; 
+    margin: 0; 
+    text-align: left; 
+    flex: 1; 
+}
+
+.mottoSection .motto div .material-icons {
+    font-size: 20px;
+    color: #777777; 
+    line-height: 1; 
+}
+
+.mottoSection .motto div .icon-link {
+    text-decoration: none; 
+    line-height: 0;
+    color: #777777; 
+    margin-right: 30px; 
+    transition: transform 0.3s ease; 
+}
+
+.mottoSection .motto div .icon-link:hover {
+    transform: scale(1.1); 
+}
+
+.mottoSection .pictureAboutMe {
+    width: 25%; 
+    height: auto; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    object-fit: cover; 
+}
+
+/**About me section*/
 
 .aboutMeSection{
-    display: flex; /* Az "Én" szekció és a szöveg egymás mellé helyezése */
-    flex-direction: column; /* A szekció elemei egymás alá kerülnek */
+    display: flex; 
+    flex-direction: row;
+    gap: 20px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .aboutMeSection h1{
-    font-size: 2em;
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.5em;
 }
 
 .aboutMeSection p{
-    font-size: 24px;
+    font-size: 23px;
+    color: #555;
 }
 
 .aboutMeSection .aboutMeText{
@@ -88,95 +183,452 @@ section{
     text-align: start; 
 }
 
-.aboutMeSection img{
-    width: 30%;
-    height: auto; /* Maintain aspect ratio */
-    margin: auto; /* Centers the picture in the remaining space */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
-}
-
-.aboutMeHeader {
-    width: 100%; /* Teljes szélességet foglal el */
-    margin-bottom: 20px; /* Távolság a tartalom alatt */
-}
-
-.aboutMeContent {
-    display: flex; /* A szöveg és a kép egymás mellé helyezése */
-    gap: 20px; /* Távolság a szöveg és a kép között */
-    align-items: center; /* Függőleges igazítás */
-}
-
-.galleryPrevSection img{
-    width: 30%;
-    height: 30%;
-}
-
-.galleryPrevSection {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.galleryContainer {
+.aboutMeSection .aboutMePicture {
+    width: 50%;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Space between images */
-    position: relative; /* For positioning arrows */
+}
+
+.aboutMeSection img {
+    width: 70%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1024px) {
+    .aboutMeSection {
+        padding: 30px;
+    }
+    
+    .aboutMeSection p {
+        font-size: 20px;
+    }
+    
+    .aboutMeSection h1 {
+        font-size: 2.2em;
+    }
+    
+    .aboutMeSection img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMeSection {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    
+    .aboutMeSection .aboutMeText,
+    .aboutMeSection .aboutMePicture {
+        width: 100%;
+    }
+    
+    .aboutMeSection .aboutMePicture {
+        margin-bottom: 20px;
+    }
+    
+    .aboutMeSection img {
+        width: 50%;
+        max-width: 300px;
+    }
+    
+    .aboutMeSection h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutMeSection {
+        padding: 15px;
+    }
+    
+    .aboutMeSection p {
+        font-size: 18px;
+    }
+    
+    .aboutMeSection h1 {
+        font-size: 1.8em;
+    }
+    
+    .aboutMeSection img {
+        width: 80%;
+    }
+}
+
+/*------------------------------------------*/
+/* Services Section - Styling for the entire services container */
+/*------------------------------------------*/
+.servicesSection {
+    padding: 60px 40px;        
+    max-width: 1600px;         
+    margin: 40px auto;          
+    box-sizing: border-box;     
+    background-color: #f5f5f5;  
+    border-radius: 12px;        
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Header styling for services section */
+.servicesSection .servicesHeader {
+    text-align: center;         /* Centers the heading */
+    margin-bottom: 40px;        /* Spacing between header and content */
+}
+
+/* Main heading with decorative underline */
+.servicesSection .servicesHeader h1 {
+    font-size: 2.5em;           /* Large font size for emphasis */
+    color: #333;                /* Dark gray text color */
+    margin: 0;                  /* Removes default margin */
+    position: relative;         /* Required for absolute positioning of underline */
+    display: inline-block;      /* Makes the element only as wide as its content */
+}
+
+/* Decorative underline for the section heading */
+.servicesSection .servicesHeader h1::after {
+    content: '';                /* Required for pseudo-element */
+    position: absolute;         /* Positions relative to parent */
+    bottom: -10px;              /* 10px below text */
+    left: 50%;                  /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for exact centering */
+    width: 50px;                /* Width of underline */
+    height: 3px;                /* Thickness of underline */
+    background-color: #007BFF;  /* Blue color for underline */
+}
+
+/* Container for service items - uses flexbox for layout */
+.servicesSection .servicesContent {
+    display: flex;              /* Uses flexbox layout */
+    gap: 30px;                  /* Space between service items */
+    align-items: stretch;       /* Makes all items same height */
+    justify-content: space-between; /* Distributes space between items */
+    flex-wrap: nowrap;          /* Prevents items from wrapping to next line */
+}
+
+/* Individual service item card styling */
+.servicesContent .serviceItem {
+    width: calc(33.333% - 20px); /* Each takes 1/3 of space minus gap */
+    padding: 30px 20px;         /* Internal spacing (more top/bottom, less sides) */
+    border-radius: 12px;        /* Rounded corners */
+    background-color: white;    /* White background for contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    display: flex;              /* Uses flexbox for child elements */
+    flex-direction: column;     /* Stacks children vertically */
+    align-items: center;        /* Centers children horizontally */
+    box-sizing: border-box;     /* Includes padding in width calculation */
+    flex-grow: 1;               /* Allows equal growth */
+    flex-basis: 0;              /* Sets initial size to 0 before growing */
+    min-width: 250px;           /* Minimum width to prevent too narrow cards */
+}
+
+/* Hover effect for service item cards */
+.servicesContent .serviceItem:hover {
+    transform: translateY(-10px); /* Lifts card up 10px on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Service item title styling */
+.servicesContent .serviceItem h2 {
+    font-size: 1.8em;           /* Large font for title */
+    margin: 0 0 15px;           /* No top margin, space below */
+    text-align: center;         /* Centers text */
+    color: #333;                /* Dark gray for readability */
+}
+
+/* Service item description styling */
+.servicesContent .serviceItem p {
+    font-size: 1.2em;           /* Slightly larger text */
+    text-align: center;         /* Centers text */
+    color: #666;                /* Medium gray for less emphasis than title */
+    line-height: 1.6;           /* Increases line height for readability */
+    margin: 0;                  /* Removes default margin */
+}
+
+/* Responsive layout for tablets */
+@media screen and (max-width: 900px) {
+    .servicesSection .servicesContent {
+        flex-wrap: wrap;        /* Allows items to wrap on smaller screens */
+    }
+    
+    .servicesContent .serviceItem {
+        flex-basis: calc(50% - 15px); /* Items take half width minus gap */
+        min-width: 200px;       /* Smaller minimum width on tablets */
+    }
+}
+
+/* Responsive layout for mobile devices */
+@media screen and (max-width: 600px) {
+    .servicesSection {
+        padding: 30px 20px;     /* Less padding on mobile */
+    }
+    
+    .servicesContent .serviceItem {
+        width: 100%;            /* Full width on mobile */
+    }
+    
+    .servicesSection .servicesHeader h1 {
+        font-size: 2em;         /* Smaller heading on mobile */
+    }
+}
+
+/*------------------------------------------*/
+/* Why Choose Me Section - Three boxes with dividers */
+/*------------------------------------------*/
+.whyChooseMeSection {
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.whyChooseMeHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.whyChooseMeHeader h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative underline matching services section */
+.whyChooseMeHeader h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+}
+
+.whyChooseMeContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+/* Create vertical dividers */
+.whyChooseMeContent .middle {
+    position: relative;
+}
+
+.whyChooseMeContent .middle::before,
+.whyChooseMeContent .middle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 70%;
+    background-color: #777;
+}
+
+.whyChooseMeContent .middle::before {
+    left: -9px;
+}
+
+.whyChooseMeContent .middle::after {
+    right: -9px;
+}
+
+.whyChooseMeItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.whyChooseMeItem .material-icons {
+    font-size: 3em;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.whyChooseMeItem h2 {
+    font-size: 1.8em;
+    margin: 0 0 15px;
+    text-align: center;
+    color: #333;
+}
+
+.whyChooseMeItem p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .whyChooseMeContent {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .whyChooseMeContent .middle::before,
+    .whyChooseMeContent .middle::after {
+        display: none;
+    }
+}
+
+/* Gallery Preview Section - Redesigned with dark background and outlined button */
+.galleryPrevSection {
+    text-align: center;
+    margin-top: 40px;
+    padding: 60px 40px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryPrevSection h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    position: relative;
+    display: inline-block;
+}
+
+.galleryPrevSection h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+}
+
+.galleryPrevContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Increased space between images */
+    position: relative;
+    margin: 40px 0;
 }
 
 .galleryImage {
     width: 30%;
     height: auto;
-    transition: none; /* Remove hover effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.galleryImage:hover {
+    transform: scale(1.03);
 }
 
 .galleryImage.middle {
-    width: 40%; /* Make the middle image larger */
-    transform: none; /* Remove hover scaling */
+    width: 40%;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     font-size: 18px;
     z-index: 1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 .left-arrow {
-    left: 10px;
+    left: 20px;
 }
 
 .right-arrow {
-    right: 10px;
+    right: 20px;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .galleryButtons {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .galleryButtons .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 12px 30px;
     color: white;
     text-decoration: none;
+    border: 2px solid white;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    background: transparent;
 }
 
 .galleryButtons .button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: #333;
+}
+
+/* Responsive adjustments for gallery section */
+@media screen and (max-width: 768px) {
+    .galleryPrevSection {
+        padding: 40px 20px;
+    }
+    
+    .galleryPrevContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .galleryImage, 
+    .galleryImage.middle {
+        width: 85%;
+    }
+    
+    .arrow {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .left-arrow {
+        left: 5px;
+    }
+    
+    .right-arrow {
+        right: 5px;
+    }
 }
 
 footer{
@@ -234,12 +686,14 @@ footer{
 }
 
 .gallerySection .galleryTiles h2{
+    font-family: 'Crimson Pro', serif;
     font-size: 40px;
     margin: 0px;
     margin-bottom: 20px;
 }
 
 .gallerySection .galleryTiles h3{
+    font-family: 'Crimson Pro', serif;
     font-size: 22px;
     margin: 0px;
 }
@@ -282,6 +736,10 @@ footer{
 
 .contactsSection .contacts{
     width: 50%;
+}
+
+h1, h2, h3 {
+    font-family: 'Crimson Pro', serif;
 }
 
 
