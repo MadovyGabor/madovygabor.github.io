@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Introduction</title>
+    <title>Main page - MG Captures</title>
     <link rel="stylesheet" href="photographyStyle.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -124,22 +124,39 @@
             KÉPEIM 
         </h1>
         <div class="galleryPrevContainer">
-            <button class="arrow left-arrow" onclick="moveLeft()">&#10094;</button>
-            <img src="/pictures/kezdoOldal/Picture 1.jpg" alt="Picture 1" class="galleryImage">
-            <img src="/pictures/kezdoOldal/Picture 2.jpg" alt="Picture 2" class="galleryImage middle">
-            <img src="/pictures/kezdoOldal/Picture 3.jpg" alt="Picture 3" class="galleryImage">
-            <button class="arrow right-arrow" onclick="moveRight()">&#10095;</button>
+            <button class="arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="gallerySlideshow">
+                <!-- Only 3 images will be visible at once -->
+                <img src="/pictures/kezdoOldal/Picture 1.jpg" alt="Picture 1" class="galleryImage">
+                <img src="/pictures/kezdoOldal/Picture 2.jpg" alt="Picture 2" class="galleryImage middle">
+                <img src="/pictures/kezdoOldal/Picture 3.jpg" alt="Picture 3" class="galleryImage">
+                <img src="/pictures/kezdoOldal/Picture 4.jpg" alt="Picture 4" class="galleryImage hidden">
+                <img src="/pictures/kezdoOldal/Picture 5.jpg" alt="Picture 5" class="galleryImage hidden">
+                <img src="/pictures/kezdoOldal/Picture 6.jpg" alt="Picture 6" class="galleryImage hidden">
+                <img src="/pictures/kezdoOldal/Picture 7.jpg" alt="Picture 7" class="galleryImage hidden">
+                <img src="/pictures/kezdoOldal/Picture 8.jpg" alt="Picture 8" class="galleryImage hidden">
+            </div>
+            <button class="arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
         </div>
         <div class="galleryButtons">
             <a href="portfolio.html" class="button">Nézd meg a teljes galériámat</a>
         </div>
     </section>
 
-    <script src="/galleryNavigation.js"></script>
+    <script src="/gallerySlideshow.js"></script>
 
     <footer>
         <div class="footerContent">
             <p>© 2025 Madový Gábor</p>
+            <div class="footerSocial">
+                <a href="https://www.facebook.com" target="_blank"><i class="material-icons">facebook</i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="material-icons">photo_camera</i></a>
+                <a href="mailto:contact@example.com"><i class="material-icons">mail</i></a>
+            </div>
+            <div class="footerInfo">
+                <span>Galánta - Újvár - Dunaszerdahely</span>
+                <span><a href="contacts.html">Kapcsolat</a> | <a href="portfolio.html">Portfólió</a></span>
+            </div>
         </div>
     </footer>
 </body>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Introduction</title>
+    <title>Elérhetőségek - MG Captures</title>
     <link rel="stylesheet" href="photographyStyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,39 +25,155 @@
     
     <section class="contactsSection">
         <div class="contactsText">
-            <h1>
-                Lépj velem kapcsolatba
-            </h1>
+            <h1>Lépj velem kapcsolatba</h1>
             <h3>
                 Van egy ötleted, és szeretnéd megvalósítani? 
-                Vagy csak kérdésed van a munkáimmal kapcsolatban?<br>
+                Vagy csak kérdésed van a munkáimmal kapcsolatban?
                 Írj bátran, és megbeszéljük a részleteket!
             </h3>
         </div>
         <div class="contactsContainer">
             <div class="contacts">
-                <h2>Hol találsz meg?</h2>
-                <h3>Galánta és környéke – Alsószeli, Szlovákia</h3>
-                <h2>Email</h2>
-                <h3>mg.captures06@gmail.com</h3>
-                <h2>Telefonszám</h2>
-                <h3>+421 903 035 624</h3>
+                <div class="contactItem">
+                    <i class="material-icons">email</i>
+                    <div>
+                        <h2>Email</h2>
+                        <h3><a href="mailto:mg.captures06@gmail.com">mg.captures06@gmail.com</a></h3>
+                    </div>
+                </div>
+                
+                <div class="contactItem">
+                    <i class="material-icons">phone</i>
+                    <div>
+                        <h2>Telefonszám</h2>
+                        <h3><a href="tel:+421903035624">+421 903 035 624</a></h3>
+                    </div>
+                </div>
 
+                <div class="contactItem">
+                    <i class="material-icons">public</i>
+                    <div>
+                        <h2>Közösségi média</h2>
+                        <div class="socialContact">
+                            <a href="https://www.facebook.com" target="_blank"><i class="material-icons">facebook</i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="material-icons">photo_camera</i></a>
+                            <a href="https://www.youtube.com" target="_blank"><i class="material-icons">video_library</i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="contactItem">
+                    <i class="material-icons">place</i>
+                    <div>
+                        <h2>Hol találsz meg?</h2>
+                        <h3>Galánta és környéke – Alsószeli, Szlovákia</h3>
+                        <div class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42636.67788081397!2d17.748754503534627!3d48.094948664211046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b72347d232979%3A0x1abafd481e557250!2s925%2002%20Als%C3%B3szeli%2C%20Szlov%C3%A1kia!5e0!3m2!1shu!2hu!4v1743705377946!5m2!1shu!2shu" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contactsForm">
-                <form action="https://formsubmit.co/mg.captures06@gmail.com" method="POST">
-                    <input type="text" name="name" required placeholder="Név">
-                    <input type="email" name="email" required placeholder="Email">
-                    <input type="text" name="subject" required placeholder="Tárgy">
-                    <button type="submit">Elküldés</button>
-            </form> 
 
+            
+            <div class="contactsForm">
+                <div class="form-status-message" id="formStatus"></div>
+                <form id="contactForm" action="https://formsubmit.co/mg.captures06@gmail.com" method="POST">
+                    <div class="input-group">
+                        <p>Add meg a teljes nevedet</p>
+                        <div class="input-wrapper">
+                            <i class="material-icons">person</i>
+                            <input type="text" id="name" name="name" required placeholder="Név">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <p>Add meg az email címed</p>
+                        <div class="input-wrapper">
+                            <i class="material-icons">email</i>
+                            <input type="email" id="email" name="email" required placeholder="Email">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <p>Válassz egy tárgyat</p>
+                        <div class="input-wrapper">
+                            <i class="material-icons">subject</i>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Válassz egy lehetőséget</option>
+                                <option value="portréfotózás">Portréfotózás</option>
+                                <option value="eseményfotózás">Eseményfotózás</option>
+                                <option value="egyedi">Egyedi megrendelés</option>
+                                <option value="egyéb">Egyéb</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <p>Írd be az üzeneted</p>
+                        <div class="input-wrapper">
+                            <i class="material-icons" style="padding-top: 50px; padding-bottom: 50px;">message</i>
+                            <textarea id="message" name="message" placeholder="Üzenet" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="form-actions">
+                            <div class="g-recaptcha" 
+                                 data-sitekey="6Le9WAkrAAAAAG7WrPMoROx_crYAJh6CbvhkbiuR" 
+                                 data-callback="enableSubmitButton" 
+                                 data-expired-callback="disableSubmitButton"></div>
+                            <button type="submit" id="submitButton" disabled class="disabled">Elküldés</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Hidden fields for formsubmit.co -->
+                    <!--<input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+                    <input type="hidden" name="_subject" value="Új üzenet a weboldalról">
+                    <input type="hidden" name="_captcha" value="false">
+                </form> 
             </div>
         </div>
-
     </section>
 
-        
+    <!-- Add reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/contact-form.js"></script>
+    <script>
+        function enableSubmitButton() {
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = false;
+            submitButton.classList.remove('disabled');
+        }
+
+        function disableSubmitButton() {
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = true;
+            submitButton.classList.add('disabled');
+            submitButton.textContent = "Elküldés"; // Reset button text
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function () {
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = true;
+            submitButton.classList.add('disabled');
+            submitButton.textContent = "Küldés folyamatban..."; // Update button text
+        });
+    </script>
+
+    
+    <footer>
+        <div class="footerContent">
+            <p>© 2025 Madový Gábor</p>
+            <div class="footerSocial">
+                <a href="https://www.facebook.com" target="_blank"><i class="material-icons">facebook</i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="material-icons">photo_camera</i></a>
+                <a href="mailto:mg.captures06@gmail.com"><i class="material-icons">mail</i></a>
+            </div>
+            <div class="footerInfo">
+                <span>Galánta - Újvár - Dunaszerdahely</span>
+                <span><a href="contacts.html">Kapcsolat</a> | <a href="portfolio.html">Portfólió</a></span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
