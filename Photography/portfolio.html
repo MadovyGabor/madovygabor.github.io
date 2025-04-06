@@ -14,12 +14,43 @@
             <h3>MADOVÝ <span>GÁBOR</span></h3>
         </div>
 
+        <div class="menuIcon" onclick="toggleMenu()">
+            <i class="material-icons">menu</i>
+        </div>
+
         <div class="navButtons">
             <a href="photographyMainPage.html" class="button">FŐOLDAL</a>
             <a href="portfolio.html" class="button active">PORTFÓLIÓ</a>
             <a href="contacts.html" class="button">ELÉRHETŐSÉGEK</a>
             <a href="../index.html" class="button">KEZDŐOLDAL</a>
         </div>
+
+        <nav class="mobileMenu">
+            <div class="closeButton" onclick="closeMenu()">×</div>
+            <ul>
+                <li><a href="photographyMainPage.html">FŐOLDAL</a></li>
+                <li><a href="portfolio.html" class="active" >PORTFÓLIÓ</a></li>
+                <li><a href="contacts.html">ELÉRHETŐSÉGEK</a></li>
+                <li><a href="../index.html">KEZDŐOLDAL</a></li>
+            </ul>
+
+       </nav>
+       <script>
+        function closeMenu() {
+            const menu = document.querySelector('.mobileMenu');
+            menu.style.display = 'none';
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('.mobileMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Ensure the menu is hidden on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            closeMenu();
+        });
+   </script>
 
     </header>
 
@@ -43,7 +74,6 @@
                     <li><a href="#travel">Travel</a>
                         <ul>
                             <li><a href="#tatranska-lomnica">Tatranská Lomnica</a></li>
-                            <li><a href="#siofok">Siófok</a></li>
                             <li><a href="#brno">Brno</a></li>
                         </ul>
                     </li>
@@ -58,7 +88,7 @@
             <div class="galleryBox">
 
                 <!-- Portéfotók-->
-                <p id="portrek" style="visibility: hidden; height: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
+                <p id="portrek" style="visibility: hidden; height: 0; margin: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
 
                 <h2>Portrék</h2>
                 <h3>Portréim</h3>
@@ -132,41 +162,142 @@
                 
                 <div class="galleryTiles">
                     <div class="galleryRow">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQRriXraP2eLTI-7bw0hfsNCAdbQwuiH3oqJV5qW_jssfxo?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQQZHQ4oQue_SZ7mNNKCGaWJAYbT62Ub8OEpmfgnmqDPUjU?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQRtPv9lY_bzQpiD5qvojSMJAVJI5ny7QuQAhAdx2fmiMsI?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQSrpE0JY4W1TYCDPywngyPCAdQrCgxxCV8xmBQ2faFxvds?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQQIjXYSLuEeQJ3RVW6UER7ZAb3BpFWaJiRT6RLTy4wpOe8?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (1).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (4).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (7).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (15).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (10).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
 
                     </div>
             
                     <div class="galleryRow">
                 
-                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQRDQ40sslG2RJ26TcWQ9E0dAaHQRnWKzbILlHgDU8dCb1k?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQT6Y2Ek5nykTZJJOz5JclcqAVDc-3ZB6QDVbJyx0dvi2EA?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQSsI0yDAPteQrCvs4HBAIrtATcUY05XNc47WgbpyVgdpcQ?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQSGAeOcgQ98Sp1g9M1-JzA1AZAISpJ-mhal1A62lajJzso?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQT5TQGLjQ11SYFGKmdic7BhAStEGXxKZ531eb022amdWk0?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://drive.google.com/file/d/1ItTEaJQjVG4jMjrDigWAEztxTIHfrWvM/preview" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (2).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (5).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (8).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (11).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (14).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
                     </div>
             
                     <div class="galleryRow">
-                        
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQTmbwfHcGzcSrzKLlslDIRGAWLwEk4P90hUqBhsGUxelc4?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQQ95lwiAkM0S416oQ2ZWhCoAaPuHiWtfzRyEFFNsVGeeWE?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQRqnju_C70PRqFoeP6wAH1hAQ4Fu-AM0hfdGqJP_cv7zbs?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQSRrNgaqmLKRZKuxZIAfLD-AQYyKvTpbYh9q4mouZJKa9E?width=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="https://1drv.ms/i/c/9ae34d7693ce4a12/IQR2ermD3CQ7S7ZJ8r_tko4JAdK6yDBDh5auptgqjUURWp4?height=1024" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
-                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (16).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (3).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (6).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (9).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/felsoszeli ballagas 24/Felszoszeli ballagas 24 (12).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
                         
                     </div> 
                     
-                </div>  
-
+                </div> 
                 
+                <!--Rakoczi tabor-->
+                <h3>Rákoczi tábor 2024</h3>
+                
+                <p id="rakoczi-tabor-24" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
+                
+                <div class="galleryTiles">
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (7).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (1).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (4).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                       
+                    </div>
+            
+                    <div class="galleryRow">
+                
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (2).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (5).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        
+                    </div>
+            
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (8).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (3).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Rendezvények/Rakoczi tabor 24/rakoczi tabor 24 (6).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                       
+                        
+                    </div> 
+                    
+                </div>
+                
+                <p id="travel" style="visibility: hidden; height: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
+                <!-- Travel-->
+                <h2>Travel</h2>
+                <!-- AMTS 25-->
+                <h3>Tatranská Lomnica</h3>
+                
+                <p id="tatranska-lomnica" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
+                
+                <div class="galleryTiles">
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (4).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (1).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (2).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (5).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (3).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Travel/Tatranska lomnica/Tatranska Lomnica (6).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                </div> 
+
+                <!-- Brno-->
+                <h3>Brno</h3>
+                
+                <p id="brno" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
+                
+                <div class="galleryTiles">
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Brno/Brno (1).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Brno/Brno (2).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Travel/Brno/Brno (3).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                </div> 
+
+                <p id="koncertek" style="visibility: hidden; height: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
+                <!-- Koncertek-->
+                <h2>Koncertek</h2>
+                <!-- Azariah Puskás aréna-->
+                <h3>Azariah Puskás aréna</h3>
+                
+                <p id="azariah" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
+                
+                <div class="galleryTiles">
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (1).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (4).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (2).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (5).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (8).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                    <div class="galleryRow">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (6).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (3).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (9).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                        <img src="/pictures/portfolio/Koncertek/Azariah/Azariah (7).webp" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+                </div> 
+
 
             </div>
         </div>
