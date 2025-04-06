@@ -36,21 +36,21 @@
 
        </nav>
        <script>
-        function closeMenu() {
-            const menu = document.querySelector('.mobileMenu');
-            menu.style.display = 'none';
-        }
+            function closeMenu() {
+                const menu = document.querySelector('.mobileMenu');
+                menu.style.display = 'none';
+            }
 
-        function toggleMenu() {
-            const menu = document.querySelector('.mobileMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
+            function toggleMenu() {
+                const menu = document.querySelector('.mobileMenu');
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            }
 
-        // Ensure the menu is hidden on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            closeMenu();
-        });
-   </script>
+            // Ensure the menu is hidden on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                closeMenu();
+            });
+        </script>
 
     </header>
     

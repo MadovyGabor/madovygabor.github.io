@@ -12,17 +12,17 @@ body{
 
 @media screen and (max-width: 480px) {
     body {
-        margin: 10px; /* Adjust margin for smaller screens */
+        margin: 10px; 
     }
-    
 }
+
 /*
-    ------
-    header
-    ------
+   ------------------
+        header
+   ------------------
 */
 
-header{
+header {
     display: flex;
     overflow: hidden;
     background-color: silver;
@@ -33,54 +33,55 @@ header{
     margin-bottom: 20px;
 }
 
-header .menuIcon{
-    display: none;
-}
-
-header h3{
+header h3 {
     font-size: 2em;
     font-family: 'Crimson Pro', serif;
 }
 
+header .menuIcon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
 
+header .menuIcon .material-icons {
+    font-size: 36px;
+    color: black;
+}
 
-header .navButtons{
+header .navButtons {
     display: flex;
     gap: 20px;
-    align-self: center; 
-    margin-left: auto; 
-    flex-wrap: wrap; 
-    max-width: 100%; 
+    align-self: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 header .navButtons .button {
     font-family: 'Overpass', sans-serif;
-    text-decoration: none; 
-    position: relative; 
-    color: black; 
+    text-decoration: none;
+    position: relative;
+    color: black;
     font-size: 16px;
 }
 
 header .navButtons .button::after {
     content: '';
     position: absolute;
-    bottom: -2px; 
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: black; 
+    background-color: black;
     transition: width 0.3s ease;
 }
 
-header .navButtons .button:hover::after {
-    width: 100%; 
-}
-
+header .navButtons .button:hover::after,
 header .navButtons .button.active::after {
-    width: 100%; 
+    width: 100%;
 }
-
-
 
 /* Responsive header adjustments */
 @media screen and (max-width: 830px) {
@@ -90,160 +91,143 @@ header .navButtons .button.active::after {
         padding: 15px;
     }
 
-    header .menuIcon{
-        display: none;
-    }
-
     header h3 {
         font-size: 2.3em;
         margin: 10px;
-
     }
-    
+
     header .navButtons {
         margin-left: 0;
         gap: 15px;
         justify-content: center;
-        flex-wrap: wrap;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 530px) {
-    
-    header{
+    header {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between; /* Space between title and menu icon */
+        justify-content: space-between;
         padding: 25px;
+    }
+
+    header .menuIcon {
+        display: block;
     }
 
     header .navButtons {
         display: none;
-    }
-    
-    header .menuIcon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: black;
-        margin-left: auto; /* Push the menu icon to the right */
-    }
-
-    header .menuIcon .material-icons {
-        font-size: 36px;
-        color: black;
     }
 
     header h3 {
         font-size: 2em;
         margin: 0;
     }
-
-   .mobileMenu{
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 250px;
-        z-index: 999;
-        background-color: rgb(255, 255, 255);
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
-        flex-direction: column;
-        justify-self: flex-start
-   }
-   
-   .mobileMenu li{
-        width: 100%;
-   }
-
-   .mobileMenu a{
-        width: 100%;
-   }
-
 }
 
 @media screen and (max-width: 400px) {
+    header {
+        padding: 15px;
+    }
+
     header h3 {
         font-size: 1.5em;
     }
-
-    header{
-        padding: 15px;
-    }
-    
 }
-.mobileMenu {
-    display: flex; /* Ensure flex layout */
-    justify-content: flex-start; /* Align items at the start */
-    align-items: flex-start; /* Align items at the top */
-    gap: 20px; /* Add spacing between the close button and menu items */
-    position: fixed; /* Fixed position for sidebar */
+
+.mobileMenu{
+    position: fixed;
     top: 0;
     right: 0;
-    width: 300px; /* Increased width for more space */
-    height: 100%; /* Full height */
-    background-color: #333; /* Dark background */
-    color: white; /* Text color */
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5); /* Stronger shadow */
-    z-index: 1000; /* Ensure it appears above other elements */
-    flex-direction: column; /* Stack items vertically */
-    padding: 20px; /* Add padding inside the sidebar */
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    border-left: 2px solid #444; /* Add a divider on the left */
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-self: flex-start
+}
+
+.mobileMenu li{
+    width: 100%;
+}
+
+.mobileMenu a{
+    width: 100%;
+}
+
+.mobileMenu {
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px; 
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 300px; 
+    height: 100%; 
+    background-color: #333; 
+    color: white; 
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+    flex-direction: column; 
+    padding: 20px; 
+    overflow-y: auto; 
+    border-left: 2px solid #444; 
 }
 
 .mobileMenu ul {
-    list-style: none; /* Remove default list styling */
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
 
 .mobileMenu ul li {
-    margin-bottom: 10px; /* Space between menu items */
-    border-bottom: 1px solid #444; /* Add dividers between items */
-    padding-bottom: 10px; /* Add spacing below each item */
+    margin-bottom: 10px; 
+    border-bottom: 1px solid #444; 
+    padding-bottom: 10px; 
 }
 
 .mobileMenu ul li:last-child {
-    border-bottom: none; /* Remove divider for the last item */
+    border-bottom: none; 
 }
 
 .mobileMenu ul li a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Text color */
-    font-size: 1.5em; /* Larger font size */
-    padding: 10px 15px; /* Add padding for clickable area */
-    display: block; /* Make the entire area clickable */
-    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.5em; 
+    padding: 10px 15px; 
+    display: block; 
+    border-radius: 8px; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .mobileMenu ul li a:hover {
-    background-color: #444; /* Highlight background on hover */
-    color: #007BFF; /* Highlight text color on hover */
+    background-color: #444; 
+    color: #007BFF;
 }
 
 .mobileMenu ul li a.active {
-    background-color: #007BFF; /* Highlight active link */
-    color: white; /* Active link text color */
-    font-weight: bold; /* Bold text for active link */
+    background-color: #007BFF; 
+    color: white; 
+    font-weight: bold; 
 }
 
 .mobileMenu .closeButton {
-    align-self: flex-start; /* Align the button at the top */
-    font-size: 2em; /* Larger close button */
+    align-self: flex-start; 
+    font-size: 2em; 
     color: white;
     cursor: pointer;
-    background: none; /* No background */
-    border: none; /* Remove border */
-    padding: 5px; /* Add some padding */
+    background: none; 
+    border: none; 
+    padding: 5px; 
     transition: color 0.3s ease;
 }
 
 .mobileMenu .closeButton:hover {
-    color: #007BFF; /* Highlight on hover */
+    color: #007BFF; 
 }
 
 /*
@@ -251,112 +235,220 @@ header .navButtons .button.active::after {
         Photography main page
         ---------------------
 */
-/*First section on the main page (Motto)*/
 
+/* Motto Section */
 .mottoSection {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    gap: 20px; 
-    padding: 40px; 
-    background-color: #f5f5f5; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mottoSection .motto {
-    width: 60%; 
-    text-align: left; 
+    width: 60%;
+    text-align: left;
 }
 
 .mottoSection .motto h2 {
-    font-family: 'Crimson Pro', serif; 
-    font-size: 3em; 
-    line-height: 1.3; 
-    margin-bottom: 20px; 
-    color: #000000; 
+    font-family: 'Crimson Pro', serif;
+    font-size: 3em;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #000;
 }
 
 .mottoSection .motto h3 {
-    font-size: 1.4em; 
-    line-height: 1.5; 
-    margin-bottom: 15px; 
-    color: #555; 
+    font-size: 1.4em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #555;
 }
 
 .mottoSection .motto div {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    margin-top: 10px; 
-}
-
-.mottoSection .motto div img {
-    width: 20px; 
-    height: 20px; 
-    object-fit: contain; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 20px; /* Adjusted for better spacing */
 }
 
 .mottoSection .motto div p {
-    font-size: 1.2em; 
-    color: #777777; 
-    margin: 0; 
-    text-align: left; 
-    flex: 1; 
+    font-size: 1.2em;
+    color: #777;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
+
+.mottoSection .motto div .material-icons{
+    font-size: 20px;
+    color: #777;
+    transition: transform 0.3s ease;
+}
+
+.mottoSection .motto div .material-icons:hover {
+    transform: scale(1.2);
 }
 
 .mottoSection .motto div .material-icons {
     font-size: 20px;
-    color: #777777; 
-    line-height: 1; 
+    color: #777;
+    transition: transform 0.3s ease;
 }
 
-.mottoSection .motto div .icon-link {
-    text-decoration: none; 
-    line-height: 0;
-    color: #777777; 
-    margin-right: 30px; 
+.mottoSection .motto div .material-icons:hover {
+    transform: scale(1.2);
+}
+
+.mottoSection .motto div .custom-icon {
+    width: 18px;
+    height: 18px;
+    color: #777;
     transition: transform 0.3s ease; 
 }
 
-.mottoSection .motto div .icon-link:hover {
-    transform: scale(1.1); 
+.mottoSection .motto div .custom-icon:hover {
+    transform: scale(1.2); 
 }
 
 .mottoSection .pictureAboutMe {
-    width: 25%; 
-    height: auto; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    object-fit: cover; 
+    width: 25%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
-/**About me section*/
+/* Responsive Adjustments for Motto Section */
+@media screen and (max-width: 1350px) {
+    .mottoSection .motto h2 {
+        font-size: 2.7em;
+    }
 
-.aboutMeSection{
-    display: flex; 
+    .mottoSection .motto h3 {
+        font-size: 1.3em;
+    }
+
+    .mottoSection .motto div p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .mottoSection .motto h2 {
+        font-size: 2.5em;
+    }
+
+    .mottoSection .motto h3 {
+        font-size: 1.15em;
+    }
+
+    .mottoSection .motto div p {
+        font-size: 0.85em;
+    }
+
+    .mottoSection .motto div .material-icons {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .mottoSection .motto h2 {
+        font-size: 2.3em;
+    }
+
+    .mottoSection .motto h3 {
+        font-size: 1em;
+    }
+
+    .mottoSection .motto div p {
+        font-size: 0.8em;
+    }
+
+    .mottoSection .motto div .material-icons {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .mottoSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 30px;
+    }
+
+    .mottoSection .motto {
+        width: 100%;
+    }
+
+    .mottoSection .motto h2 {
+        font-size: 2.5em;
+    }
+
+    .mottoSection .motto h3 {
+        font-size: 1.2em;
+    }
+
+    .mottoSection .pictureAboutMe {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mottoSection {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .mottoSection .motto h2 {
+        font-size: 2em;
+    }
+
+    .mottoSection .motto h3 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mottoSection .motto h2 {
+        font-size: 1.65em;
+    }
+
+    .mottoSection .motto div {
+        gap: 10px; 
+    }
+}
+
+/* About Me Section */
+.aboutMeSection {
+    display: flex;
     flex-direction: row;
-    gap: 20px; 
+    gap: 20px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
-.aboutMeSection h1{
+.aboutMeSection h1 {
     font-family: 'Crimson Pro', serif;
     font-size: 2.5em;
 }
 
-.aboutMeSection p{
+.aboutMeSection p {
     font-size: 23px;
     color: #555;
 }
 
-.aboutMeSection .aboutMeText{
+.aboutMeSection .aboutMeText {
     width: 50%;
-    align-items: center;
-    text-align: start; 
+    text-align: start;
 }
 
 .aboutMeSection .aboutMePicture {
@@ -374,22 +466,56 @@ header .navButtons .button.active::after {
     object-fit: cover;
 }
 
-/* Media queries for responsive design */
-@media screen and (max-width: 1024px) {
+/* Responsive Adjustments for About Me Section */
+@media screen and (max-width: 1230px) {
     .aboutMeSection {
         padding: 30px;
     }
-    
-    .aboutMeSection p {
-        font-size: 20px;
-    }
-    
+
     .aboutMeSection h1 {
-        font-size: 2.2em;
+        font-size: 2.3em;
     }
-    
+
+    .aboutMeSection p {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .aboutMeSection {
+        padding: 25px;
+    }
+
+    .aboutMeSection h1 {
+        font-size: 2.1em;
+    }
+
+    .aboutMeSection p {
+        font-size: 19px;
+    }
+
     .aboutMeSection img {
-        width: 70%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .aboutMeSection h1 {
+        font-size: 1.9em;
+    }
+
+    .aboutMeSection p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .aboutMeSection h1 {
+        font-size: 1.7em;
+    }
+
+    .aboutMeSection p {
+        font-size: 18px;
     }
 }
 
@@ -398,24 +524,68 @@ header .navButtons .button.active::after {
         flex-direction: column-reverse;
         padding: 20px;
     }
-    
+
     .aboutMeSection .aboutMeText,
     .aboutMeSection .aboutMePicture {
         width: 100%;
     }
-    
-    .aboutMeSection .aboutMePicture {
-        margin-bottom: 20px;
+
+    .aboutMeSection .aboutMeText {
+        padding: 0 50px;
+        box-sizing: border-box;
     }
-    
+
     .aboutMeSection img {
-        width: 50%;
+        width: 40%;
         max-width: 300px;
     }
-    
+
     .aboutMeSection h1 {
-        font-size: 2em;
-        text-align: center;
+        font-size: 1.9em;
+        margin: 10px;
+    }
+
+    .aboutMeSection p {
+        font-size: 19px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .aboutMeSection .aboutMeText {
+        padding: 0 25px;
+    }
+
+    .aboutMeSection h1 {
+        font-size: 1.9em;
+        margin-bottom: 30px;
+    }
+
+    .aboutMeSection p {
+        font-size: 21px;
+        
+    }
+
+    .aboutMeSection img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .aboutMeSection .aboutMeText {
+        padding: 0 15px;
+    }
+
+    .aboutMeSection h1 {
+        font-size: 1.9em;
+    }
+
+    .aboutMeSection p {
+        font-size: 20px;
+    }
+
+    .aboutMeSection img {
+        width: 60%;
     }
 }
 
@@ -423,139 +593,176 @@ header .navButtons .button.active::after {
     .aboutMeSection {
         padding: 15px;
     }
-    
-    .aboutMeSection p {
-        font-size: 18px;
+
+    .aboutMeSection .aboutMeText {
+        padding: 0 10px;
     }
-    
+
     .aboutMeSection h1 {
         font-size: 1.8em;
     }
-    
-    .aboutMeSection img {
-        width: 80%;
+
+    .aboutMeSection p {
+        font-size: 19px;
     }
 }
 
+@media screen and (max-width: 430px) {
+    .aboutMeSection {
+        padding: 0;
+    }
+
+}
+
 /*------------------------------------------*/
-/* Services Section - Styling for the entire services container */
+/* Services Section */
 /*------------------------------------------*/
 .servicesSection {
-    padding: 60px 40px;        
-    max-width: 1600px;         
-    margin: 40px auto;          
-    box-sizing: border-box;     
-    background-color: #f5f5f5;  
-    border-radius: 12px;        
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 60px 40px;
+    max-width: 1600px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling for services section */
 .servicesSection .servicesHeader {
-    text-align: center;         /* Centers the heading */
-    margin-bottom: 40px;        /* Spacing between header and content */
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Main heading with decorative underline */
 .servicesSection .servicesHeader h1 {
-    font-size: 2.5em;           /* Large font size for emphasis */
-    color: #333;                /* Dark gray text color */
-    margin: 0;                  /* Removes default margin */
-    position: relative;         /* Required for absolute positioning of underline */
-    display: inline-block;      /* Makes the element only as wide as its content */
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+    position: relative;
+    display: inline-block;
 }
 
-/* Decorative underline for the section heading */
 .servicesSection .servicesHeader h1::after {
-    content: '';                /* Required for pseudo-element */
-    position: absolute;         /* Positions relative to parent */
-    bottom: -10px;              /* 10px below text */
-    left: 50%;                  /* Centers horizontally */
-    transform: translateX(-50%); /* Adjusts for exact centering */
-    width: 50px;                /* Width of underline */
-    height: 3px;                /* Thickness of underline */
-    background-color: #007BFF;  /* Blue color for underline */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
 }
 
-/* Container for service items - uses flexbox for layout */
 .servicesSection .servicesContent {
-    display: flex;              /* Uses flexbox layout */
-    gap: 30px;                  /* Space between service items */
-    align-items: stretch;       /* Makes all items same height */
-    justify-content: space-between; /* Distributes space between items */
-    flex-wrap: nowrap;          /* Prevents items from wrapping to next line */
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-/* Individual service item card styling */
 .servicesContent .serviceItem {
-    width: calc(33.333% - 20px); /* Each takes 1/3 of space minus gap */
-    padding: 30px 20px;         /* Internal spacing (more top/bottom, less sides) */
-    border-radius: 12px;        /* Rounded corners */
-    background-color: white;    /* White background for contrast */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
-    display: flex;              /* Uses flexbox for child elements */
-    flex-direction: column;     /* Stacks children vertically */
-    align-items: center;        /* Centers children horizontally */
-    box-sizing: border-box;     /* Includes padding in width calculation */
-    flex-grow: 1;               /* Allows equal growth */
-    flex-basis: 0;              /* Sets initial size to 0 before growing */
-    min-width: 250px;           /* Minimum width to prevent too narrow cards */
+    width: calc(33.333% - 20px);
+    padding: 30px 20px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 250px;
 }
 
-/* Hover effect for service item cards */
 .servicesContent .serviceItem:hover {
-    transform: translateY(-10px); /* Lifts card up 10px on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Service item title styling */
 .servicesContent .serviceItem h2 {
-    font-size: 1.8em;           /* Large font for title */
-    margin: 0 0 15px;           /* No top margin, space below */
-    text-align: center;         /* Centers text */
-    color: #333;                /* Dark gray for readability */
+    font-size: 1.8em;
+    margin: 0 0 15px;
+    text-align: center;
+    color: #333;
 }
 
-/* Service item description styling */
 .servicesContent .serviceItem p {
-    font-size: 1.2em;           /* Slightly larger text */
-    text-align: center;         /* Centers text */
-    color: #666;                /* Medium gray for less emphasis than title */
-    line-height: 1.6;           /* Increases line height for readability */
-    margin: 0;                  /* Removes default margin */
+    font-size: 1.2em;
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* Responsive layout for tablets */
+/* Responsive Adjustments for Services Section */
+@media screen and (max-width: 1150px) {
+    .servicesContent .serviceItem h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .servicesContent .serviceItem p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .servicesSection {
+        padding: 30px 20px;
+    }
+
+    .servicesContent .serviceItem h2 {
+        font-size: 1.4em;
+    }
+
+    .servicesContent .serviceItem p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .servicesSection .servicesContent {
+        gap: 10px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .servicesSection .servicesContent {
-        flex-wrap: wrap;        /* Allows items to wrap on smaller screens */
+        flex-wrap: wrap;
+        gap: 20px;
     }
-    
+
     .servicesContent .serviceItem {
-        flex-basis: calc(50% - 15px); /* Items take half width minus gap */
-        min-width: 200px;       /* Smaller minimum width on tablets */
+        flex-basis: 100%;
+        min-width: 200px;
+    }
+
+    .servicesContent .serviceItem h2 {
+        font-size: 1.65em;
+    }
+
+    .servicesContent .serviceItem p {
+        font-size: 22px;
     }
 }
 
-/* Responsive layout for mobile devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 440px) {
     .servicesSection {
-        padding: 30px 20px;     /* Less padding on mobile */
+        padding: 30px 10px;
     }
-    
-    .servicesContent .serviceItem {
-        width: 100%;            /* Full width on mobile */
-    }
-    
+
     .servicesSection .servicesHeader h1 {
-        font-size: 2em;         /* Smaller heading on mobile */
+        font-size: 1.9em;
+    }
+
+    .servicesContent .serviceItem p {
+        font-size: 20px;
     }
 }
 
-/*------------------------------------------*/
-/* Why Choose Me Section - Three boxes with dividers */
-/*------------------------------------------*/
+/* Why Choose Me Section */
 .whyChooseMeSection {
     padding: 60px 40px;
     max-width: 1400px;
@@ -577,7 +784,6 @@ header .navButtons .button.active::after {
     display: inline-block;
 }
 
-/* Decorative underline matching services section */
 .whyChooseMeHeader h1::after {
     content: '';
     position: absolute;
@@ -597,7 +803,6 @@ header .navButtons .button.active::after {
     position: relative;
 }
 
-/* Create vertical dividers */
 .whyChooseMeContent .middle {
     position: relative;
 }
@@ -652,20 +857,91 @@ header .navButtons .button.active::after {
     text-align: center;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
+@media screen and (max-width: 1000px) {
+    .whyChooseMeSection {
+        padding: 40px 20px;
+    }
+}
+
 @media screen and (max-width: 900px) {
+    .whyChooseMeSection {
+        padding: 30px 60px;
+    }
+
     .whyChooseMeContent {
         flex-direction: column;
-        gap: 30px;
+        gap: 0px;
     }
-    
+
     .whyChooseMeContent .middle::before,
     .whyChooseMeContent .middle::after {
         display: none;
     }
+
+    .whyChooseMeContent .whyChooseMeItem:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+
+    .whyChooseMeItem {
+        padding: 15px;
+    }
+
+    .whyChooseMeItem h2 {
+        font-size: 2em;
+    }
+
+    .whyChooseMeItem p {
+        font-size: 22px;
+    }
 }
 
-/* Gallery Preview Section - Redesigned with dark background and outlined button */
+@media screen and (max-width: 550px) {
+    .whyChooseMeSection {
+        padding: 30px 10px;
+    }
+
+    .whyChooseMeHeader h1 {
+        font-size: 2.2em;
+    }
+
+    .whyChooseMeItem h2 {
+        font-size: 1.6em;
+    }
+
+    .whyChooseMeItem p {
+        font-size: 1em;
+    }
+
+    .whyChooseMeItem .material-icons {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .whyChooseMeSection {
+        padding: 30px 10px;
+    }
+
+    .whyChooseMeHeader h1 {
+        font-size: 2.1em;
+    }
+
+    .whyChooseMeItem h2 {
+        font-size: 1.4em;
+    }
+
+    .whyChooseMeItem p {
+        font-size: 1.2em;
+    }
+
+    .whyChooseMeItem .material-icons {
+        font-size: 2.2em;
+    }
+}
+
+    /* Gallery Preview Section */
 .galleryPrevSection {
     text-align: center;
     margin-top: 40px;
@@ -779,31 +1055,50 @@ header .navButtons .button.active::after {
 /* Responsive adjustments for gallery section */
 @media screen and (max-width: 768px) {
     .galleryPrevSection {
-        padding: 40px 20px;
+        padding: 40px 20px; /* Reduce padding */
     }
-    
+
     .galleryPrevContainer {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row; /* Align arrows and image horizontally */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
-    
-    .galleryImage, 
+
+    .galleryImage,
     .galleryImage.middle {
-        width: 85%;
+        width: 100%; /* Display only one image at a time */
+        max-width: 300px; /* Limit the image size */
     }
-    
+
+    .galleryImage:not(:first-child) {
+        display: none; /* Hide all images except the first one */
+    }
+
     .arrow {
-        width: 40px;
+        display: flex; /* Ensure arrows are visible */
+        width: 40px; /* Adjust arrow size */
         height: 40px;
         padding: 10px;
     }
-    
+
     .left-arrow {
-        left: 5px;
+        left: 0; /* Adjust arrow position */
     }
-    
+
     .right-arrow {
-        right: 5px;
+        right: 0; /* Adjust arrow position */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .galleryPrevSection h1 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    .galleryButtons .button {
+        font-size: 1em; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust button padding */
     }
 }
 
@@ -1224,12 +1519,12 @@ socialContact a {
     transition: transform 0.3s ease;
 }
 
-.socialContact a:hover {
+socialContact a:hover {
     transform: scale(1.2);
     color: #007BFF;
 }
 
-.socialContact .material-icons {
+socialContact .material-icons {
     font-size: 32px;
 }
 
@@ -1531,6 +1826,8 @@ img.skeleton {
   50% { left: 100%; }
   100% { left: 100%; }
 }
+
+
 
 
 
