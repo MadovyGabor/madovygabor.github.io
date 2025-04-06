@@ -14,12 +14,43 @@
             <h3>MADOVÝ <span>GÁBOR</span></h3>
         </div>
 
+        <div class="menuIcon" onclick="toggleMenu()">
+            <i class="material-icons">menu</i>
+        </div>
+
         <div class="navButtons">
             <a href="photographyMainPage.html" class="button">FŐOLDAL</a>
             <a href="portfolio.html" class="button">PORTFÓLIÓ</a>
             <a href="contacts.html" class="button active">ELÉRHETŐSÉGEK</a>
             <a href="../index.html" class="button">KEZDŐOLDAL</a>
         </div>
+
+        <nav class="mobileMenu">
+            <div class="closeButton" onclick="closeMenu()">×</div>
+            <ul>
+                <li><a href="photographyMainPage.html">FŐOLDAL</a></li>
+                <li><a href="portfolio.html">PORTFÓLIÓ</a></li>
+                <li><a href="contacts.html" class="active">ELÉRHETŐSÉGEK</a></li>
+                <li><a href="../index.html">KEZDŐOLDAL</a></li>
+            </ul>
+
+       </nav>
+       <script>
+        function closeMenu() {
+            const menu = document.querySelector('.mobileMenu');
+            menu.style.display = 'none';
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('.mobileMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Ensure the menu is hidden on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            closeMenu();
+        });
+   </script>
 
     </header>
     
