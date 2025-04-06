@@ -1,0 +1,24 @@
+<!-- Template for adding images-->
+                <p id="portrek" style="visibility: hidden; height: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
+
+                <h2>Portrék</h2>
+                <h3>Szallagavató</h3>
+                
+                <p id="szallagavato" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
+                
+                <div class="galleryTiles">
+                    <div class="galleryRow">
+                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+                    </div>
+            
+                    <div class="galleryRow">
+                
+                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')">
+
+                    </div>
+            
+                    <div class="galleryRow">
+                        <img src="" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')"> 
+                    </div> 
+                    
+                </div>  

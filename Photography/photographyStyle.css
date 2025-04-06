@@ -773,9 +773,23 @@ footer {
     box-sizing: border-box; /* Include padding and border in width */
 }
 
-.sidebarContainer{
-    width: 20%; /* Sidebar takes 30% of the width */
+.galleryWrapper {
+    display: flex;
+    align-items: flex-start; /* Align sidebar and gallery at the top */
+    gap: 20px; /* Space between sidebar and gallery */
+}
+
+.sidebarContainer {
+    position: sticky;
+    top: 20px; /* Distance from the top of the viewport */
+    height: fit-content; /* Dynamically adjust height based on content */
+    max-height: 80vh; /* Limit the height to 80% of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
     flex-shrink: 0; /* Prevent shrinking */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    padding: 10px; /* Optional: Add padding */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
 }
 
 .sidebarList {
@@ -799,6 +813,36 @@ footer {
 .sidebarList ul li {
     margin-top: 5px; /* Adds smaller spacing for nested list items */
     font-size: 16px; /* Slightly smaller font size for nested items */
+}
+
+.sidebarList li.selected {
+    background-color: #007BFF; /* Highlight background color */
+    color: white; /* Text color for better contrast */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    padding: 5px 10px; /* Optional: Add padding for better appearance */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.sidebarLink {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.sidebarLink:hover {
+    color: #007BFF; /* Highlight on hover */
+}
+
+.sidebarLink.active {
+    color: #007BFF; /* Highlight active link */
+    font-weight: bold;
+    border-bottom: 2px solid #007BFF; /* Add underline for active link */
+}
+
+.sidebarList a.activeSection {
+  text-decoration: underline;
+  color: #ee0000;
+  
 }
 
 .gallerySection .galleryTiles {
@@ -828,6 +872,10 @@ footer {
     position: relative;
 }
 
+.galleryBox {
+    flex-grow: 1;
+}
+
 .gallerySection .galleryBox .galleryTiles .galleryRow {
     width: 33%;
 }
@@ -836,6 +884,16 @@ footer {
     width: 100%;
     padding-bottom: 10px;
     transition: transform 1s ease;
+}
+
+.galleryBox h2, 
+.galleryBox h3 {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #f9f9f9; /* Match the background color */
+    z-index: 1; /* Ensure it stays above other content */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    border-bottom: 1px solid #ddd; /* Optional: Add a separator */
 }
 
 /*Contacts page*/
@@ -1249,6 +1307,37 @@ button.disabled {
 
 .form-actions button {
     margin: 0;
+}
+
+/* Skeleton loading effect */
+.skeleton {
+  width: 800px;           /* or a fixed width, e.g., 300px */ 
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+img.skeleton {
+  /* Optionally enforce size on the img element while loading */
+  width: 100%;
+  display: block;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
 }
 
 
