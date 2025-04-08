@@ -144,76 +144,99 @@ header .navButtons .button.active::after {
     }
 }
 
+header .mobileMenuIcon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+header .mobileMenuIcon .material-icons {
+    font-size: 36px;
+    color: black;
+}
+
+/* Show the mobile menu icon on smaller devices */
+@media screen and (max-width: 1100px) {
+    header .mobileMenuIcon {
+        display: block;
+    }
+
+    .sidebarContainer {
+        display: none; /* Ensure the sidebar is hidden */
+    }
+}
+
+/* Mobile menu styling */
 .mobileMenu {
-    display: none; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 20px; 
-    position: fixed; 
+    display: none; /* Hidden by default */
+    position: fixed;
     top: 0;
     right: 0;
-    width: 250px; 
-    height: 100%; 
-    background-color: #333; 
-    color: white; 
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5); 
-    z-index: 1000; 
-    flex-direction: column; 
-    padding: 20px; 
-    overflow-y: auto; 
-    border-left: 2px solid #444; 
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    border-left: 2px solid #444;
+}
+
+.mobileMenu.active {
+    display: flex; /* Show the menu when active */
 }
 
 .mobileMenu ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .mobileMenu ul li {
-    margin-bottom: 10px; 
-    border-bottom: 1px solid #444; 
-    padding-bottom: 10px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
 }
 
 .mobileMenu ul li:last-child {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 .mobileMenu ul li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 1.5em; 
-    padding: 10px 15px; 
-    display: block; 
-    border-radius: 8px; 
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .mobileMenu ul li a:hover {
-    background-color: #444; 
+    background-color: #444;
     color: #007BFF;
 }
 
-.mobileMenu ul li a.active {
-    background-color: #007BFF; 
-    color: white; 
-    font-weight: bold; 
-}
-
 .mobileMenu .closeButton {
-    align-self: flex-start; 
-    font-size: 2em; 
+    align-self: flex-start;
+    font-size: 2em;
     color: white;
     cursor: pointer;
-    background: none; 
-    border: none; 
-    padding: 5px; 
+    background: none;
+    border: none;
+    padding: 5px;
     transition: color 0.3s ease;
 }
 
 .mobileMenu .closeButton:hover {
-    color: #007BFF; 
+    color: #007BFF;
 }
 
 /*
@@ -1049,17 +1072,17 @@ header .navButtons .button.active::after {
 }
 
 .gallery-next-btn {
-    right: 20px; /* Adjusted spacing */
+    right: 20px; 
 }
 
 .gallery-prev-btn {
-    left: 20px; /* Adjusted spacing */
+    left: 20px;
 }
 
 .gallery-next-btn:hover,
 .gallery-prev-btn:hover {
-    color: #007BFF; /* Change color on hover */
-    transform: translateY(-50%) scale(1.3); /* Slightly enlarge on hover */
+    color: #007BFF; 
+    transform: translateY(-50%) scale(1.3); 
 }
 
 /* Responsive adjustments */
@@ -1105,36 +1128,37 @@ header .navButtons .button.active::after {
 
 .gallerySection {
     display: flex;
-    gap: 20px; /* Space between sidebar and gallery */
-    width: 100%; /* Ensure it spans the full width */
-    box-sizing: border-box; /* Include padding and border in width */
+    gap: 20px; 
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 .galleryWrapper {
     display: flex;
-    align-items: flex-start; /* Align sidebar and content at the top */
-    gap: 20px; /* Space between sidebar and gallery */
+    align-items: flex-start; 
+    gap: 20px; 
 }
 
 .sidebarContainer {
     position: sticky;
-    top: 0px; /* Distance from the top of the viewport */
-    height: fit-content; /* Dynamically adjust height based on content */
-    max-height: 80vh; /* Limit the height to 80% of the viewport */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    flex-shrink: 0; /* Prevent shrinking */
-    background-color: #333; /* Match the dark background of the hamburger menu */
-    color: white; /* White text for contrast */
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5); /* Match the shadow of the hamburger menu */
-    padding: 20px; /* Increase padding for consistency */
-    font-family: 'Overpass', sans-serif; /* Match font with the rest of the site */
+    border-radius: 12px; 
+    top: 0px; 
+    height: fit-content; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    flex-shrink: 0; 
+    background-color: #333; 
+    color: white; 
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5); 
+    padding: 15px; 
+    font-family: 'Overpass', sans-serif; 
 }
 
 .sidebarList {
     list-style: none; 
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    gap: 15px; /* Add spacing between items */
+    padding: 0; 
+    margin: 0; 
+    gap: 15px; 
 }
 
 .sidebarList ul {
@@ -1144,23 +1168,23 @@ header .navButtons .button.active::after {
 }
 
 .sidebarList li {
-    margin-bottom: 10px; /* Add spacing between items */
-    font-size: 20px; /* Adjust font size for readability */
-    border-radius: 5px; /* Rounded corners for items */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-    background-color: transparent; /* Default transparent background */
-    color: white; /* White text */
+    margin-bottom: 10px; 
+    font-size: 20px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    background-color: transparent; 
+    color: white; 
 }
 
 .sidebarList ul li {
-    margin-top: 5px; /* Adds smaller spacing for nested list items */
-    font-size: 18px; /* Slightly smaller font size for nested items */
+    margin-bottom: 5px; 
+    font-size: 18px; 
 }
 
 .sidebarList li.selected {
-    background-color: #007BFF; /* Highlight selected item */
-    color: white; /* White text for selected item */
-    font-weight: bold; /* Bold text for emphasis */
+    background-color: #007BFF; 
+    color: white; 
+    font-weight: bold; 
 }
 
 .sidebarLink {
@@ -1185,7 +1209,7 @@ header .navButtons .button.active::after {
     color: #ccc;
     text-decoration: none;
     font-size: 1em;
-    margin-left: 15px;
+    margin-left: 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -1196,36 +1220,24 @@ header .navButtons .button.active::after {
 }
 
 .sidebarLink.active {
-    color: #007BFF; /* Highlight active link */
+    color: #007BFF; 
     font-weight: bold;
-    border-bottom: 2px solid #007BFF; /* Add underline for active link */
+    border-bottom: 2px solid #007BFF; 
 }
 
 .sidebarList a.activeSection {
   text-decoration: underline;
-  color: #ee0000;
+  color: #007BFF;
   
 }
 
 .sidebarList li:hover {
-    background-color: #444; /* Match hover background of the hamburger menu */
-    color: #007BFF; /* Highlight text color on hover */
+    background-color: #444; 
+    color: #007BFF; 
 }
 
 .sidebarList li.selected .sidebarLink {
-    color: white; /* Ensure link text matches selected item color */
-}
-
-/* Responsive adjustments for sidebar */
-@media screen and (max-width: 768px) {
-    .sidebarContainer {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
-    .sidebarList li {
-        font-size: 16px; /* Adjust font size for smaller screens */
-        padding: 8px; /* Reduce padding for items */
-    }
+    color: white; 
 }
 
 .gallerySection .galleryBox .galleryTiles {
@@ -1243,10 +1255,10 @@ header .navButtons .button.active::after {
 }
 
 .galleryBox {
-    flex-grow: 1; /* Allow the gallery content to take the remaining space */
+    flex-grow: 1; 
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-start; /* Align content to the top */
+    flex-direction: column; 
+    justify-content: flex-start; 
 }
 
 .gallerySection .galleryBox .galleryTiles .galleryRow {
@@ -1259,19 +1271,26 @@ header .navButtons .button.active::after {
     transition: transform 1s ease;
 }
 
-
-
+.galleryBox h3::after {
+    content: '▼'; /* Unicode for a down arrow */
+    position: absolute;
+    right: 10px; /* Position the icon to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em; /* Adjust the size of the icon */
+    color: #555; /* Match the color of the header */
+}
 
 .galleryBox h2, 
 .galleryBox h3 {
     position: sticky;
-    top: 0; /* Stick to the top of the viewport */
-    background-color: #f9f9f9; /* Match the background color */
-    z-index: 1; /* Ensure it stays above other content */
-    padding: 10px; /* Optional: Add padding for better appearance */
-    margin-bottom: 10px; /* Remove default margin */
-    margin-top: 0; /* Remove top margin */
-    border-bottom: 1px solid #ddd; /* Optional: Add a separator */
+    top: 0; 
+    background-color: #f9f9f9; 
+    z-index: 1; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    margin-top: 0; 
+    border-bottom: 1px solid #ddd; 
 }
 
 .galleryBox h2 {
@@ -1291,12 +1310,28 @@ header .navButtons .button.active::after {
     background-color: #007BFF;
 }
 
-
 .galleryBox h3 {
     font-family: 'Overpass', sans-serif;
     font-size: 1.5em;
     color: #555;
     font-weight: 400;
+}
+
+/* Responsive adjustments for sidebar */
+@media screen and (max-width: 1100px) {
+    .sidebarContainer{
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallerySection .galleryBox .galleryTiles {
+        flex-wrap: wrap; 
+    }
+
+    .gallerySection .galleryBox .galleryTiles .galleryRow {
+        width: 100%; 
+    }
 }
 
 /*
@@ -1308,9 +1343,9 @@ header .navButtons .button.active::after {
 .contactsSection .contactsText {
     width: 100%;
     align-items: center;
-    text-align: center; /* Horizontally center text */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    text-align: center; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 
@@ -1368,14 +1403,12 @@ header .navButtons .button.active::after {
     width: 100%;
     display: flex;
     gap: 40px;
-   
 }
  
-
 .contactsSection .contacts {
     width: 50%;
     padding: 30px;
-    background-color: #333; /* Dark background for contact details */
+    background-color: #333; 
     color: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1449,7 +1482,6 @@ header .navButtons .button.active::after {
     font-size: 32px;
 }
 
-
 .mapContainer {
     margin-top: 15px;
     border-radius: 8px;
@@ -1462,7 +1494,6 @@ header .navButtons .button.active::after {
     display: block;
     width: 100%;
 }
-
 
 .contactsSection .contactsForm {
     width: 50%;
@@ -1512,7 +1543,7 @@ header .navButtons .button.active::after {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: center; /* Center the button */
+    align-self: center; 
 }
 
 .contactsForm button:hover {
@@ -1787,10 +1818,14 @@ img.skeleton {
   100% { left: 100%; }
 }
 
+/*temporary*/
 
+/*
+        ---------------------
+            Contact page
+        ---------------------
+*/
 
-
-/* Footer redesign */
 footer {
     display: flex;
     justify-content: center;
@@ -1832,7 +1867,6 @@ footer {
     background-color: #007BFF;
 }
 
-/* Social media links for footer */
 .footerSocial {
     display: flex;
     gap: 20px;
@@ -1854,7 +1888,6 @@ footer {
     color: #007BFF;
 }
 
-/* Additional footer info */
 .footerInfo {
     width: 100%;
     display: flex;

@@ -24,33 +24,7 @@
             <a href="contacts.html" class="button">ELÉRHETŐSÉGEK</a>
             <a href="../index.html" class="button">KEZDŐOLDAL</a>
         </div>
-
-        <nav class="mobileMenu">
-            <div class="closeButton" onclick="closeMenu()">×</div>
-            <ul>
-                <li><a href="photographyMainPage.html">FŐOLDAL</a></li>
-                <li><a href="portfolio.html" class="active" >PORTFÓLIÓ</a></li>
-                <li><a href="contacts.html">ELÉRHETŐSÉGEK</a></li>
-                <li><a href="../index.html">KEZDŐOLDAL</a></li>
-            </ul>
-
        </nav>
-       <script>
-        function closeMenu() {
-            const menu = document.querySelector('.mobileMenu');
-            menu.style.display = 'none';
-        }
-
-        function toggleMenu() {
-            const menu = document.querySelector('.mobileMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        // Ensure the menu is hidden on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            closeMenu();
-        });
-   </script>
 
     </header>
 
@@ -300,6 +274,29 @@
                     </div>
                 </div> 
 
+                <div class="galleryBox">
+                    <h3>Gallery Section</h3>
+                    <div class="dropdownMenu">
+                        <ul>
+                            <li>Option 1</li>
+                            <li>Option 2</li>
+                            <li>Option 3</li>
+                        </ul>
+                    </div>
+                    <!-- ...existing gallery content... -->
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                    const headings = document.querySelectorAll(".galleryBox h3");
+
+                     headings.forEach((heading) => {
+                        heading.addEventListener("click", () => {
+                         heading.style.display = "block";
+                        });
+                        });
+                    });
+                </script>
 
             </div>
         </div>
