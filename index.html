@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üdvözöllek</title>
     <link rel="stylesheet" href="indexStyles.css">
-    <meta name="google-site-verification" content="LkPx__JwKTVa2_w94PqQ7Ha6jkAB3anLES1gGXRk4lE" />
 </head>
 <body>
     <div class="container">
@@ -13,19 +12,14 @@
             <h1>Üdvözöllek az oldalamon!</h1>
         </div>
         <div class="cardsContainer">
-            <div class="card photo" onclick="navigateTo('Photography/photographyMainPage.html')">
+            <a href="Photography/photographyMainPage.html" class="card photo">
                 <img src="pictures/index/photography.jpg" alt="Fotós">
                 <div class="card-text">Fotózás</div>
-            </div>
-            <div class="card it" onclick="navigateTo('it.html')">
+            </a>
+            <a href="it.html" class="card it">
                 <img src="pictures/index/it.jpg" alt="Informatikus">
                 <div class="card-text">Informatika</div>
-            </div>
+            </a>
         </div>
     </div>
-    <script>
-        function navigateTo(page) {
-            window.location.href = page;
-        }
-    </script>
 </html>
