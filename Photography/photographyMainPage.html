@@ -1,185 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page - MG Captures</title>
+    <meta name="description" content="Madový Gábor fotós - Pillanatok megörökítése portréfotózással, eseményfotózással és egyedi megrendelésekkel.">
+    <meta name="keywords" content="fotós, portréfotózás, eseményfotózás, egyedi fotózás, Madový Gábor, Galánta, Újvár, Dunaszerdahely, koncertek, autós események, tablófotók">
+    <meta name="author" content="Madový Gabriel">
+    <meta name="robots" content="index, follow">
+    <title>Főoldal - MG Captures | Madový Gábor</title>
     <link rel="stylesheet" href="photographyStyle.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <script src="gallerySidebarHighlite.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Photographer",
+            "name": "Madový Gábor",
+            "description": "Pillanatok megörökítése portréfotózással, eseményfotózással és egyedi megrendelésekkel.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Galánta, Újvár, Dunaszerdahely, Galanta, Nové Zámky, Dunajská Streda",
+            },
+            "url": "https://www.instagram.com/mg.captures06/",
+            "sameAs": [
+                "https://www.instagram.com/mg.captures06/"
+            ]
+        }
+    </script>
+    
 </head>
 <body>
     <header>
-
-        
-        <h3>MADOVÝ GÁBOR</h3>
+        <h1>MADOVÝ GÁBOR</h1>
         
         <div class="menuIcon" onclick="toggleMenu()">
-            <i class="material-icons">menu</i>
+            <i class="material-icons" aria-label="Menu">menu</i>
         </div>
 
-        <div class="navButtons">
-            <a href="photographyMainPage.html" class="button active">FŐOLDAL</a>
-            <a href="portfolio.html" class="button">PORTFÓLIÓ</a>
-            <a href="contacts.html" class="button">ELÉRHETŐSÉGEK</a>
-            <a href="../index.html" class="button">KEZDŐOLDAL</a>
-        </div>
-
-       <nav class="mobileMenu">
-            <div class="closeButton" onclick="closeMenu()">×</div>
+        <nav class="navButtons">
+            <a href="photographyMainPage.html" class="button active" aria-label="Főoldal">FŐOLDAL</a>
+            <a href="portfolio.html" class="button" aria-label="Portfólió">PORTFÓLIÓ</a>
+            <a href="contacts.html" class="button" aria-label="Elérhetőségek">ELÉRHETŐSÉGEK</a>
+            <a href="../index.html" class="button" aria-label="Kezdőoldal">KEZDŐOLDAL</a>
+        </nav>
+        
+        <nav class="mobileMenu">
+            <div class="closeButton" onclick="closeMenu()" aria-label="Close Menu">×</div>
             <ul>
-                <li><a href="photographyMainPage.html" class="active">FŐOLDAL</a></li>
-                <li><a href="portfolio.html">PORTFÓLIÓ</a></li>
-                <li><a href="contacts.html">ELÉRHETŐSÉGEK</a></li>
-                <li><a href="../index.html">KEZDŐOLDAL</a></li>
+                <li><a href="photographyMainPage.html" class="active" aria-label="Főoldal">FŐOLDAL</a></li>
+                <li><a href="portfolio.html" aria-label="Portfólió">PORTFÓLIÓ</a></li>
+                <li><a href="contacts.html" aria-label="Elérhetőségek">ELÉRHETŐSÉGEK</a></li>
+                <li><a href="../index.html" aria-label="Kezdőoldal">KEZDŐOLDAL</a></li>
             </ul>
+        </nav> 
 
-       </nav>
-       
+        <script>
+            function closeMenu() {
+                const menu = document.querySelector('.mobileMenu');
+                menu.style.display = 'none';
+            }
+
+            function toggleMenu() {
+                const menu = document.querySelector('.mobileMenu');
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            }
+
+            // Ensure the menu is hidden on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                closeMenu();
+            });
+        </script>
+
     </header>
 
     <section class="mottoSection">
-
         <div class="motto">
             <h2>Az emlékek halványulnak,<br> a képek megmaradnak.</h2>
-            <h3>
+            <p>
                 Szenvedélyem a pillanatok megörökítése, legyen szó portrékról, eseményekről vagy egyedi fotózási ötletekről. 
                 Ha minőségi, természetes és őszinte képeket szeretnél, jó helyen jársz!
-            </h3>
+            </p>
             <div>
-                <i class="material-icons">location_on</i>
+                <i class="material-icons" aria-label="Location">location_on</i>
                 <p>Galánta - Újvár - Dunaszerdahely</p>
-                <a href="https://www.instagram.com/mg.captures06/" target="_blank" class="icon-link">
+                <a href="https://www.instagram.com/mg.captures06/" target="_blank" class="icon-link" aria-label="Instagram">
                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="custom-icon">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
                         <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="currentColor"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="currentColor"/>
                     </svg>
                 </a>
-                <a href="contacts.html" class="icon-link">
+                <a href="contacts.html" class="icon-link" aria-label="Email">
                     <i class="material-icons">mail</i>
                 </a>
             </div>
-            
         </div>
-
-        <img src="\pictures\kezdoOldal\kepRolamTemp.webp" alt="Kép rólam" class="pictureAboutMe">
-
+        <img src="\pictures\kezdoOldal\kepRolamTemp.webp" alt="Madový Gábor portré" class="pictureAboutMe">
     </section>
 
     <section class="aboutMeSection">
-
-        
-            <div class="aboutMeText">
-                <h1>
-                    Szia, Gábor vagyok, fiatal fotós, akit mindig is lenyűgözött a pillanatok megörökítése.
-                </h1>
-                <p> 
-                    Már régóta fotózom, de mostanra kezdtem el professzionális szinten is foglalkozni vele. 
-                    Ez nem jelenti azt, hogy kezdő vagyok épp ellenkezőleg, minden egyes képnél arra törekszem, hogy a lehető legjobb minőséget nyújtsam.
-                </p>
-                <p>
-                    A fotózás számomra nem csak egy kattintás szeretem megragadni a pillanatok esztétikáját, az apró történeteket, amik egy-egy kép mögött rejtőznek. 
-                    Kedvelem a természetes reakciókat, az őszinte érzelmeket, és célom, hogy minden fotóm hiteles és életteli legyen. 
-                    A részletekre való odafigyelés és az esztétikus képi világ kialakítása számomra kiemelten fontos.
-                </p>
-
-            </div>
-            <div class ="aboutMePicture">
-                <img src="/pictures/kezdoOldal/aboutMePicture.webp" alt="Egy kep rolam">
-            </div>   
-            
+        <div class="aboutMeText">
+            <h2>
+                Szia, Gábor vagyok, fiatal fotós, akit mindig is lenyűgözött a pillanatok megörökítése.
+            </h2>
+            <p> 
+                Már régóta fotózom, de mostanra kezdtem el professzionális szinten is foglalkozni vele. 
+                Ez nem jelenti azt, hogy kezdő vagyok épp ellenkezőleg, minden egyes képnél arra törekszem, hogy a lehető legjobb minőséget nyújtsam.
+            </p>
+            <p>
+                A fotózás számomra nem csak egy kattintás szeretem megragadni a pillanatok esztétikáját, az apró történeteket, amik egy-egy kép mögött rejtőznek. 
+                Kedvelem a természetes reakciókat, az őszinte érzelmeket, és célom, hogy minden fotóm hiteles és életteli legyen. 
+                A részletekre való odafigyelés és az esztétikus képi világ kialakítása számomra kiemelten fontos.
+            </p>
+        </div>
+        <div class="aboutMePicture">
+            <img src="/pictures/kezdoOldal/aboutMePicture.webp" alt="Madový Gábor fotós portré">
+        </div>
     </section>
 
     <section class="servicesSection">
-
         <div class="servicesHeader">
-            <h1>Szolgáltatások</h1>
+            <h2>Szolgáltatások</h2>
         </div>
-
         <div class="servicesContent">
             <div class="serviceItem">
-                <h2>Portréfotózás</h2>
+                <h3>Portréfotózás</h3>
                 <p>Egyéni és csoportos portrék, tablófotók, osztályképek.</p>
             </div>
             <div class="serviceItem">
-                <h2>Eseményfotózás</h2>
+                <h3>Eseményfotózás</h3>
                 <p>Kisebb rendezvények, koncertek, autós események, egyéb megbeszélés alapján.</p>
             </div>
             <div class="serviceItem">
-                <h2>Egyedi megrendelések</h2>
-                <p>Nyitott vagyok új ötletekre és különleges fotózásokra, szóval ha van egy elképzelésed, bátran írj! </p>
+                <h3>Egyedi megrendelések</h3>
+                <p>Nyitott vagyok új ötletekre és különleges fotózásokra, szóval ha van egy elképzelésed, bátran írj!</p>
             </div>
         </div>
-
     </section>
 
     <section class="whyChooseMeSection">
-    <div class="whyChooseMeHeader">
-        <h1>Miért válassz engem?</h1>
-    </div>
-    <div class="whyChooseMeContent">
-        <div class="whyChooseMeItem">
-            <i class="material-icons">verified</i>
-            <h2>Garantált Minőség</h2>
-            <p>Garantálom, hogy a legjobb minőséget nyújtom, és minden fontos pillanatot megörökítek.</p>
+        <div class="whyChooseMeHeader">
+            <h2>Miért válassz engem?</h2>
         </div>
-        <div class="whyChooseMeItem middle">
-            <i class="material-icons">mood</i>
-            <h2>Barátságos Légkör</h2>
-            <p>Barátságos és nyugodt légkört teremtek a fotózás során, hogy természetes és önazonos képek készüljenek.</p>
+        <div class="whyChooseMeContent">
+            <div class="whyChooseMeItem">
+                <i class="material-icons" aria-label="Garantált Minőség">verified</i>
+                <h3>Garantált Minőség</h3>
+                <p>Garantálom, hogy a legjobb minőséget nyújtom, és minden fontos pillanatot megörökítek.</p>
+            </div>
+            <div class="whyChooseMeItem middle">
+                <i class="material-icons" aria-label="Barátságos Légkör">mood</i>
+                <h3>Barátságos Légkör</h3>
+                <p>Barátságos és nyugodt légkört teremtek a fotózás során, hogy természetes és önazonos képek készüljenek.</p>
+            </div>
+            <div class="whyChooseMeItem">
+                <i class="material-icons" aria-label="Rugalmasság">autorenew</i>
+                <h3>Rugalmasság</h3>
+                <p>Rugalmas vagyok, és mindig nyitott vagyok új ötletekre és egyedi kérésekre.</p>
+            </div>
         </div>
-        <div class="whyChooseMeItem">
-            <i class="material-icons">autorenew</i>
-            <h2>Rugalmasság</h2>
-            <p>Rugalmas vagyok, és mindig nyitott vagyok új ötletekre és egyedi kérésekre.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="galleryPrevSection">
-    <h2>Portfólió</h2>
-   
-    <div class="gallery-wrapper">
-        <i id="left" class="gallery-prev-btn fa-solid fa-angle-left"></i>
-        <div class="carousel">
-            <img src="/pictures/portfolio/Portrék/Portréim/Picture 1.webp" alt="">
-            <img src="/pictures/portfolio/Portrék/Portréim/Picture 2.webp" alt="">
-            <img src="/pictures/portfolio/Portrék/Portréim/Picture 3.webp" alt="">
-            <img src="/pictures/portfolio/Portrék/Portréim/Picture 4.webp" alt="">
-            <img src="/pictures/portfolio/Portrék/Portréim/Picture 5.webp" alt="">
+        <h2>Portfólió</h2>
+        <div class="gallery-wrapper">
+            <i id="left" class="gallery-prev-btn fa-solid fa-angle-left" aria-label="Előző kép"></i>
+            <div class="carousel">
+                <img src="/pictures/portfolio/Portrék/Portréim/Picture 1.webp" alt="Portré 1">
+                <img src="/pictures/portfolio/Portrék/Portréim/Picture 2.webp" alt="Portré 2">
+                <img src="/pictures/portfolio/Portrék/Portréim/Picture 3.webp" alt="Portré 3">
+                <img src="/pictures/portfolio/Portrék/Portréim/Picture 4.webp" alt="Portré 4">
+                <img src="/pictures/portfolio/Portrék/Portréim/Picture 5.webp" alt="Portré 5">
+            </div>
+            <i id="right" class="gallery-next-btn fa-solid fa-angle-right" aria-label="Következő kép"></i>
         </div>
-        <i id="right" class="gallery-next-btn fa-solid fa-angle-right"></i>
-    </div>
-    
-    
-    <div class="galleryButtons">
-        <a href="portfolio.html" class="button">További képek megtekintése</a>
-    </div>
-</section>
-
-
-
-
+        <div class="galleryButtons">
+            <a href="portfolio.html" class="button" aria-label="További képek megtekintése">További képek megtekintése</a>
+        </div>
+    </section>
 
     <footer>
         <div class="footerContent">
             <p>© 2025 Madový Gábor</p>
             <div class="footerSocial">
-                <a href="#" target="_blank"><i class="material-icons">facebook</i></a>
-                <a href="https://www.instagram.com/mg.captures06/" target="_blank">
+                <a href="#" target="_blank" aria-label="Facebook"><i class="material-icons">facebook</i></a>
+                <a href="https://www.instagram.com/mg.captures06/" target="_blank" aria-label="Instagram">
                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="custom-icon">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
                         <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="currentColor"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="currentColor"/>
                     </svg>
                 </a>
-                <a href="mailto:mg.captures06@gmail.com"><i class="material-icons">mail</i></a>
+                <a href="mailto:mg.captures06@gmail.com" aria-label="Email"><i class="material-icons">mail</i></a>
             </div>
             <div class="footerInfo">
                 <span>Galánta - Újvár - Dunaszerdahely</span>
-                <span><a href="contacts.html">Kapcsolat</a> | <a href="portfolio.html">Portfólió</a></span>
+                <span><a href="contacts.html" aria-label="Kapcsolat">Kapcsolat</a> | <a href="portfolio.html" aria-label="Portfólió">Portfólió</a></span>
             </div>
         </div>
     </footer>

@@ -41,7 +41,7 @@ header {
     align-items: center;
 }
 
-header h3 {
+header h1,h3 {
     font-size: 2em;
     font-family: 'Crimson Pro', serif;
 }
@@ -99,7 +99,7 @@ header .navButtons .button.active::after {
         padding: 15px;
     }
 
-    header h3 {
+    header h1,h3 {
         font-size: 2.3em;
         margin: 10px;
     }
@@ -128,7 +128,7 @@ header .navButtons .button.active::after {
         display: none;
     }
 
-    header h3 {
+    header h1,h3 {
         font-size: 2em;
         margin: 0;
     }
@@ -139,13 +139,13 @@ header .navButtons .button.active::after {
         padding: 15px;
     }
 
-    header h3 {
+    header h1,h3 {
         font-size: 1.5em;
     }
 }
 
 header .mobileMenuIcon {
-    display: none; /* Hidden by default */
+    display: none; 
     font-size: 24px;
     cursor: pointer;
     color: black;
@@ -167,13 +167,13 @@ header .mobileMenuIcon .material-icons {
     }
 
     .sidebarContainer {
-        display: none; /* Ensure the sidebar is hidden */
+        display: none; 
     }
 }
 
 /* Mobile menu styling */
 .mobileMenu {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     right: 0;
@@ -190,7 +190,7 @@ header .mobileMenuIcon .material-icons {
 }
 
 .mobileMenu.active {
-    display: flex; /* Show the menu when active */
+    display: flex; 
 }
 
 .mobileMenu ul {
@@ -273,9 +273,10 @@ header .mobileMenuIcon .material-icons {
     color: #000;
 }
 
-.mottoSection .motto h3 {
+.mottoSection .motto p {
     font-size: 1.4em;
     line-height: 1.5;
+    font-weight: bold;
     margin-bottom: 15px;
     color: #555;
 }
@@ -341,7 +342,7 @@ header .mobileMenuIcon .material-icons {
         font-size: 2.7em;
     }
 
-    .mottoSection .motto h3 {
+    .mottoSection .motto p{
         font-size: 1.3em;
     }
 
@@ -355,7 +356,7 @@ header .mobileMenuIcon .material-icons {
         font-size: 2.5em;
     }
 
-    .mottoSection .motto h3 {
+    .mottoSection .motto p{
         font-size: 1.15em;
     }
 
@@ -373,7 +374,7 @@ header .mobileMenuIcon .material-icons {
         font-size: 2.3em;
     }
 
-    .mottoSection .motto h3 {
+    .mottoSection .motto p{
         font-size: 1em;
     }
 
@@ -403,7 +404,7 @@ header .mobileMenuIcon .material-icons {
         font-size: 2.5em;
     }
 
-    .mottoSection .motto h3 {
+    .mottoSection .motto p{
         font-size: 1.2em;
     }
 
@@ -422,7 +423,7 @@ header .mobileMenuIcon .material-icons {
         font-size: 2em;
     }
 
-    .mottoSection .motto h3 {
+    .mottoSection .motto p{
         font-size: 1em;
     }
 }
@@ -448,7 +449,7 @@ header .mobileMenuIcon .material-icons {
     box-sizing: border-box;
 }
 
-.aboutMeSection h1 {
+.aboutMeSection h2 {
     font-family: 'Crimson Pro', serif;
     font-size: 2.5em;
 }
@@ -484,7 +485,7 @@ header .mobileMenuIcon .material-icons {
         padding: 30px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 2.3em;
     }
 
@@ -498,7 +499,7 @@ header .mobileMenuIcon .material-icons {
         padding: 25px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 2.1em;
     }
 
@@ -512,7 +513,7 @@ header .mobileMenuIcon .material-icons {
 }
 
 @media screen and (max-width: 980px) {
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 1.9em;
     }
 
@@ -522,7 +523,7 @@ header .mobileMenuIcon .material-icons {
 }
 
 @media screen and (max-width: 850px) {
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 1.7em;
     }
 
@@ -552,7 +553,7 @@ header .mobileMenuIcon .material-icons {
         max-width: 300px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 1.9em;
         margin: 10px;
     }
@@ -568,7 +569,7 @@ header .mobileMenuIcon .material-icons {
         padding: 0 25px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2{
         font-size: 1.9em;
         margin-bottom: 30px;
     }
@@ -588,7 +589,7 @@ header .mobileMenuIcon .material-icons {
         padding: 0 15px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 1.9em;
     }
 
@@ -610,7 +611,7 @@ header .mobileMenuIcon .material-icons {
         padding: 0 10px;
     }
 
-    .aboutMeSection h1 {
+    .aboutMeSection h2 {
         font-size: 1.8em;
     }
 
@@ -642,7 +643,7 @@ header .mobileMenuIcon .material-icons {
     margin-bottom: 40px;
 }
 
-.servicesSection .servicesHeader h1 {
+.servicesSection .servicesHeader h2 {
     font-size: 2.5em;
     color: #333;
     margin: 0;
@@ -650,7 +651,7 @@ header .mobileMenuIcon .material-icons {
     display: inline-block;
 }
 
-.servicesSection .servicesHeader h1::after {
+.servicesSection .servicesHeader h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -690,7 +691,7 @@ header .mobileMenuIcon .material-icons {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.servicesContent .serviceItem h2 {
+.servicesContent .serviceItem h3 {
     font-size: 1.8em;
     margin: 0 0 15px;
     text-align: center;
@@ -707,7 +708,7 @@ header .mobileMenuIcon .material-icons {
 
 /* Responsive Adjustments for Services Section */
 @media screen and (max-width: 1150px) {
-    .servicesContent .serviceItem h2 {
+    .servicesContent .serviceItem h3 {
         font-size: 1.6em;
     }
 }
@@ -723,7 +724,7 @@ header .mobileMenuIcon .material-icons {
         padding: 30px 20px;
     }
 
-    .servicesContent .serviceItem h2 {
+    .servicesContent .serviceItem h3 {
         font-size: 1.4em;
     }
 
@@ -749,7 +750,7 @@ header .mobileMenuIcon .material-icons {
         min-width: 200px;
     }
 
-    .servicesContent .serviceItem h2 {
+    .servicesContent .serviceItem h3 {
         font-size: 1.65em;
     }
 
@@ -763,7 +764,7 @@ header .mobileMenuIcon .material-icons {
         padding: 30px 10px;
     }
 
-    .servicesSection .servicesHeader h1 {
+    .servicesSection .servicesHeader h2 {
         font-size: 1.9em;
     }
 
@@ -786,7 +787,7 @@ header .mobileMenuIcon .material-icons {
     margin-bottom: 40px;
 }
 
-.whyChooseMeHeader h1 {
+.whyChooseMeHeader h2 {
     font-size: 2.5em;
     color: #333;
     margin: 0;
@@ -794,7 +795,7 @@ header .mobileMenuIcon .material-icons {
     display: inline-block;
 }
 
-.whyChooseMeHeader h1::after {
+.whyChooseMeHeader h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -852,7 +853,7 @@ header .mobileMenuIcon .material-icons {
     margin-bottom: 20px;
 }
 
-.whyChooseMeItem h2 {
+.whyChooseMeItem h3 {
     font-size: 1.8em;
     margin: 0 0 15px;
     text-align: center;
@@ -898,7 +899,7 @@ header .mobileMenuIcon .material-icons {
         padding: 15px;
     }
 
-    .whyChooseMeItem h2 {
+    .whyChooseMeItem h3 {
         font-size: 2em;
     }
 
@@ -912,11 +913,11 @@ header .mobileMenuIcon .material-icons {
         padding: 30px 10px;
     }
 
-    .whyChooseMeHeader h1 {
+    .whyChooseMeHeader h2 {
         font-size: 2.2em;
     }
 
-    .whyChooseMeItem h2 {
+    .whyChooseMeItem h3 {
         font-size: 1.6em;
     }
 
@@ -934,11 +935,11 @@ header .mobileMenuIcon .material-icons {
         padding: 30px 10px;
     }
 
-    .whyChooseMeHeader h1 {
+    .whyChooseMeHeader h2 {
         font-size: 2.1em;
     }
 
-    .whyChooseMeItem h2 {
+    .whyChooseMeItem h3 {
         font-size: 1.4em;
     }
 
@@ -1041,18 +1042,6 @@ header .mobileMenuIcon .material-icons {
     margin-right: 0; 
 }
 
-@media screen and (max-width: 900px) {
-    .carousel img {
-        width: calc(100% / 2); 
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .carousel img {
-        width: 100%; 
-    }
-}
-
 /* Navigation controls */
 .gallery-next-btn,
 .gallery-prev-btn {
@@ -1086,16 +1075,16 @@ header .mobileMenuIcon .material-icons {
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-    .gallery-slide {
-        aspect-ratio: 3/2; /* Slightly taller on medium screens */
+
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2); 
     }
 }
 
+
+
 @media screen and (max-width: 768px) {
-    .gallery-slide {
-        aspect-ratio: 16/9; /* Wider aspect ratio on small screens */
-    }
     
     .gallery-next-btn,
     .gallery-prev-btn {
@@ -1104,11 +1093,18 @@ header .mobileMenuIcon .material-icons {
     }
 }   
 
-@media screen and (max-width: 480px) {
-    .gallery-slide {
-        aspect-ratio: 1/1; /* Square images on very small screens */
+@media screen and (max-width: 550px) {
+    .carousel img {
+        width: 100%; 
     }
+}
+
+@media screen and (max-width: 480px) {
     
+    .galleryPrevSection h2 {
+        font-size: 2.1em; /* Adjust the size as needed */
+    }
+
     .portfolio-card {
         max-width: 100%;
         margin: 0 auto;
@@ -1120,6 +1116,7 @@ header .mobileMenuIcon .material-icons {
         height: 30px;
     }
 }
+
 /*
         ---------------------
             Portfolio page
@@ -1271,15 +1268,7 @@ header .mobileMenuIcon .material-icons {
     transition: transform 1s ease;
 }
 
-.galleryBox h3::after {
-    content: '▼'; /* Unicode for a down arrow */
-    position: absolute;
-    right: 10px; /* Position the icon to the right */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em; /* Adjust the size of the icon */
-    color: #555; /* Match the color of the header */
-}
+
 
 .galleryBox h2, 
 .galleryBox h3 {
@@ -1321,6 +1310,16 @@ header .mobileMenuIcon .material-icons {
 @media screen and (max-width: 1100px) {
     .sidebarContainer{
         display: none; 
+    }
+
+    .galleryBox h3::after {
+        content: '▼'; 
+        position: absolute;
+        right: 10px; 
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.8em; 
+        color: #555; 
     }
 }
 
@@ -1371,7 +1370,7 @@ header .mobileMenuIcon .material-icons {
     margin-bottom: 40px;
 }
 
-.contactsSection .contactsText h1 {
+.contactsSection .contactsText h2 {
     font-size: 2.5em;
     color: #333;
     margin: 0 0 20px;
@@ -1379,7 +1378,7 @@ header .mobileMenuIcon .material-icons {
     display: inline-block;
 }
 
-.contactsSection .contactsText h1::after {
+.contactsSection .contactsText h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -1706,15 +1705,15 @@ button.disabled {
     }
 
     .contactsContainer .contacts h2{
-        font-size: 1.9em;
+        font-size: 1.7em;
     }
 
     .contactsContainer .contacts h3{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     .contactsContainer .contacts a{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     .contactsSection .contactsText h3{
@@ -1725,7 +1724,7 @@ button.disabled {
         font-size: 1.8em;
     }
     .contactItem .material-icons {
-        font-size: 34px;
+        font-size: 31px;
     }
 
     .contactsContainer .contactsForm{
@@ -1734,12 +1733,12 @@ button.disabled {
     }
 
     .contactsForm p{
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 }
 @media screen and (max-width: 550px) {
     
-    .contactsSection .contactsText h1{
+    .contactsSection .contactsText h2{
         font-size: 2em;
     }
 
@@ -1749,6 +1748,7 @@ button.disabled {
 
     .contactsSection {
         padding: 20px;
+        box-sizing: border-box;
     }
     
     .contactsContainer .contacts {
