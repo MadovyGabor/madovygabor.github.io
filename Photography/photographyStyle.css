@@ -21,6 +21,7 @@ h1, h2, h3 {
     font-family: 'Crimson Pro', serif;
 }
 
+
 /*
    ------------------
         header
@@ -1330,6 +1331,9 @@ header .mobileMenuIcon .material-icons {
 
     .gallerySection .galleryBox .galleryTiles .galleryRow {
         width: 100%; 
+    }
+    .galleryBox h3{
+        font-size: 1.3em; 
     }
 }
 

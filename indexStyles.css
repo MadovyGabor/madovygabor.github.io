@@ -4,122 +4,146 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .container {
     max-height: fit-content;
-    flex: 1; /* Allow container to take remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    border-radius: 12px;
     width: 100%;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    overflow: hidden; /* Prevent overflow */
-    display: flex; /* Add flexbox layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    border-bottom: 1px solid rgb(172, 169, 169);
-    flex-shrink: 0; /* Prevent header from shrinking */
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto 10px;
+    max-width: 1600px;
 }
 
 h1 {
-    font-size: 3em;
-    padding: 20px;
-    font-weight: bolder;
+    font-size: 2.5em;
+    color: #333;
     margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
 }
 
 .cardsContainer {
-    flex: 1; /* Allow cards container to take remaining space */
+    flex: 1;
     width: 100%;
-    height: 100px;
-    display: flex; /* Use flexbox layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: space-around; /* Space out cards evenly */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    position: relative; /* Add relative positioning */
-    width: 48%; /* Adjust width to fit two cards in a row */
-    height: 610px; /* Set a fixed height for the card */
+    position: relative;
+    width: 48%;
+    height: 560px;
     margin: 10px;
-    padding: 10px; /* Remove padding */
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     background-color: white;
-    overflow: hidden; /* Ensure content does not overflow */
+    overflow: hidden;
 }
 
 .card img {
-    width: 100%; /* Make image take the whole card */
-    height: 100%; /* Make image take the whole card */
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
-    object-fit: cover; /* Ensure the image fits inside the div */
+    object-fit: cover;
 }
 
 .card-text {
-    position: absolute; /* Position text absolutely */
-    top: 50%; /* Center text vertically */
-    left: 50%; /* Center text horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to center */
-    color: white; /* Text color */
-    font-size: 1.5em; /* Text size */
-    font-weight: bold; /* Text weight */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
+    transform: scale(1.01); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.681); 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
-.centered-text {
-    text-align: center; /* Center text */
+.with-background {
+    background-color: rgba(120, 118, 118, 0.863);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Media query for tablets and landscape orientation on phones */
 @media (min-width: 601px) and (max-width: 1040px) {
     .card {
-        width: 45%; /* Make cards take half width on tablets and landscape phones */
-        margin: 10px; /* Adjust margin for spacing */
-        height: auto; /* Allow height to adjust automatically */
+        width: 45%;
+        margin: 10px;
+        height: auto;
     }
-
-    
 }
 
-/* Media query for mobile devices */
 @media (max-width: 600px) {
     .card {
-        width: 100%; /* Make cards take full width on mobile */
-        margin: 10px 0; /* Adjust margin for spacing */
-        height: 350px; /* Set a fixed height for the card */
+        width: 100%;
+        margin: 10px 0;
+        height: 350px;
     }
 
     .card img {
-        height: 100%; /* Ensure the image takes the full height of the card */
+        height: 100%;
     }
+
     .card-text {
-        font-size: 2em; /* Adjust text size for mobile */
+        font-size: 2em;
     }
+
     .container {
         padding: 10px;
     }
+
     h1 {
         font-size: 2.5em;
     }
 }
 
 @media (max-width: 400px) {
-    h1{
-        font-size: 35px;
-    }
     h1 {
-        font-size: 2em;
+        font-size: 30px;
     }
 }
 
