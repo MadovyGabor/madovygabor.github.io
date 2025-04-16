@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('p[id]');
-  const sidebarLinks = document.querySelectorAll('.sidebarList a');
+  const sidebarLinks = document.querySelectorAll('.sidebarList a, .mobileMenu a');
 
   function onScroll() {
     let currentSection = '';

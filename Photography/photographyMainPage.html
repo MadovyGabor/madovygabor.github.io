@@ -63,6 +63,42 @@
             </ul>
         </nav> 
 
+        <div class="fullscreenMenu" id="fullscreenMenu">
+            <div class="menuHeader">
+                <h2>Menü</h2>
+                <button class="closeButton" onclick="closeFullscreenMenu()" aria-label="Close Menu">×</button>
+            </div>
+            <ul class="sidebarList">
+                <li>
+                    <a href="#portrek" class="sidebarLink" onclick="closeFullscreenMenu()">Portrék</a>
+                    <ul>
+                        <li><a href="#portreim" class="sidebarSubLink" onclick="navigateAndClose(this)">Portréim</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#rendezvenyek" class="sidebarLink" onclick="navigateAndClose(this)">Rendezvények</a>
+                    <ul>
+                        <li><a href="#amts-25" class="sidebarSubLink" onclick="navigateAndClose(this)">AMTS 25</a></li>
+                        <li><a href="#felsoszeli-ballagas-24" class="sidebarSubLink" onclick="navigateAndClose(this)">Felsőszeli alapiskola ballagás 24</a></li>
+                        <li><a href="#rakoczi-tabor-24" class="sidebarSubLink" onclick="navigateAndClose(this)">Rákoczi tábor 24</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#travel" class="sidebarLink" onclick="navigateAndClose(this)">Travel</a>
+                    <ul>
+                        <li><a href="#tatranska-lomnica" class="sidebarSubLink" onclick="navigateAndClose(this)">Tatranská Lomnica</a></li>
+                        <li><a href="#brno" class="sidebarSubLink" onclick="navigateAndClose(this)">Brno</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#koncertek" class="sidebarLink" onclick="navigateAndClose(this)">Koncertek</a>
+                    <ul>
+                        <li><a href="#azahriah" class="sidebarSubLink" onclick="navigateAndClose(this)">Azahriah Puskás aréna</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
         <script>
             function closeMenu() {
                 const menu = document.querySelector('.mobileMenu');
@@ -72,6 +108,25 @@
             function toggleMenu() {
                 const menu = document.querySelector('.mobileMenu');
                 menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            }
+
+            function openFullscreenMenu() {
+                const menu = document.getElementById('fullscreenMenu');
+                menu.style.display = 'flex';
+            }
+
+            function closeFullscreenMenu() {
+                const menu = document.getElementById('fullscreenMenu');
+                menu.style.display = 'none';
+            }
+
+            function navigateAndClose(link) {
+                const menu = document.getElementById('fullscreenMenu');
+                menu.style.display = 'none';
+
+                // Highlight the active link
+                document.querySelectorAll('.sidebarLink, .sidebarSubLink').forEach(el => el.classList.remove('active'));
+                link.classList.add('active');
             }
 
             // Ensure the menu is hidden on page load
@@ -192,7 +247,7 @@
         <div class="footerContent">
             <p>© 2025 Madový Gábor</p>
             <div class="footerSocial">
-                <a href="#" target="_blank" aria-label="Facebook"><i class="material-icons">facebook</i></a>
+                <a href="https://www.facebook.com/profile.php?id=61574942680651" target="_blank" aria-label="Facebook"><i class="material-icons">facebook</i></a>
                 <a href="https://www.instagram.com/mg.captures06/" target="_blank" aria-label="Instagram">
                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="custom-icon">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>

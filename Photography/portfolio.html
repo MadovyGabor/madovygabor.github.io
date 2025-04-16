@@ -116,12 +116,49 @@
                 </ul>
             </div>
             <div class="galleryBox">
+                <!-- Full-screen dropdown menu -->
+                <div class="fullscreenMenu" id="fullscreenMenu">
+                    <div class="menuHeader">
+                        <h2>Tartalom</h2>
+                        <button class="closeButton" onclick="closeFullscreenMenu()" aria-label="Close Menu">×</button>
+                    </div>
+                    <ul class="sidebarList">
+                        <li>
+                            <a href="#portrek" class="sidebarLink" onclick="navigateAndClose(this)">Portrék</a>
+                            <ul>
+                                <li><a href="#portreim" class="sidebarSubLink" onclick="navigateAndClose(this)">Portréim</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#rendezvenyek" class="sidebarLink" onclick="navigateAndClose(this)">Rendezvények</a>
+                            <ul>
+                                <li><a href="#amts-25" class="sidebarSubLink" onclick="navigateAndClose(this)">AMTS 25</a></li>
+                                <li><a href="#felsoszeli-ballagas-24" class="sidebarSubLink" onclick="navigateAndClose(this)">Felsőszeli alapiskola ballagás 24</a></li>
+                                <li><a href="#rakoczi-tabor-24" class="sidebarSubLink" onclick="navigateAndClose(this)">Rákoczi tábor 24</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#travel" class="sidebarLink" onclick="navigateAndClose(this)">Travel</a>
+                            <ul>
+                                <li><a href="#tatranska-lomnica" class="sidebarSubLink" onclick="navigateAndClose(this)">Tatranská Lomnica</a></li>
+                                <li><a href="#brno" class="sidebarSubLink" onclick="navigateAndClose(this)">Brno</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#koncertek" class="sidebarLink" onclick="navigateAndClose(this)">Koncertek</a>
+                            <ul>
+                                <li><a href="#azahriah" class="sidebarSubLink" onclick="navigateAndClose(this)">Azahriah Puskás aréna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
+            
                 <!-- Portéfotók-->
                 <p id="portrek" style="visibility: hidden; height: 0; margin: 0; overflow: hidden;"> This is for the anchored link to work properly with sticky header.</p>
 
                 <h2>Portrék</h2>
-                <h3>Portréim</h3>
+                <h3 onclick="openFullscreenMenu()">Portréim</h3>
                 
                 <p id="portreim" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -150,7 +187,7 @@
                 <!-- Rendezvenyek-->
                 <h2>Rendezvények</h2>
                 <!-- AMTS 25-->
-                <h3>AMTS 2025</h3>
+                <h3 onclick="openFullscreenMenu()">AMTS 2025</h3>
                 
                 <p id="amts-25" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -186,7 +223,7 @@
                 </div>
 
                 <!--Felsőszeli alapiskola ballagás 2024-->
-                <h3>Felsőszeli alapiskola ballagás</h3>
+                <h3 onclick="openFullscreenMenu()">Felsőszeli alapiskola ballagás</h3>
                 
                 <p id="felsoszeli-ballagas-24" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -224,7 +261,7 @@
                 </div> 
                 
                 <!--Rakoczi tabor-->
-                <h3>Rákoczi tábor 2024</h3>
+                <h3 onclick="openFullscreenMenu()">Rákoczi tábor 2024</h3>
                 
                 <p id="rakoczi-tabor-24" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -257,7 +294,7 @@
                 <!-- Travel-->
                 <h2>Travel</h2>
                 <!-- AMTS 25-->
-                <h3>Tatranská Lomnica</h3>
+                <h3 onclick="openFullscreenMenu()">Tatranská Lomnica</h3>
                 
                 <p id="tatranska-lomnica" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -280,7 +317,7 @@
                 </div> 
 
                 <!-- Brno-->
-                <h3>Brno</h3>
+                <h3 onclick="openFullscreenMenu()">Brno</h3>
                 
                 <p id="brno" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -303,7 +340,7 @@
                 <!-- Koncertek-->
                 <h2>Koncertek</h2>
                 <!-- Azariah Puskás aréna-->
-                <h3>Azahriah Puskás aréna</h3>
+                <h3 onclick="openFullscreenMenu()">Azahriah Puskás aréna</h3>
                 
                 <p id="azahriah" style="visibility: hidden; height: 0; overflow: hidden;">This is for the anchored link to work properly with sticky header.</p>
                 
@@ -327,36 +364,6 @@
 
                     </div>
                 </div> 
-
-                <!-- ...work in progress... -->
-                <!--
-                <div class="galleryBox">
-                    <h3>Gallery Section</h3>
-                    <div class="dropdownMenu">
-                        <ul>
-                            <li>Option 1</li>
-                            <li>Option 2</li>
-                            <li>Option 3</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                    const headings = document.querySelectorAll(".galleryBox h3");
-
-                     headings.forEach((heading) => {
-                        heading.addEventListener("click", () => {
-                         heading.style.display = "block";
-                        });
-                        });
-                    });
-                </script>
-                -->
-
-                <!-- ...work in progress... -->
-
             </div>
         </div>
     </section>
@@ -366,7 +373,7 @@
         <div class="footerContent">
             <p>© 2025 Madový Gábor</p>
             <div class="footerSocial">
-                <a href="#" target="_blank" aria-label="Facebook"><i class="material-icons">facebook</i></a>
+                <a href="https://www.facebook.com/profile.php?id=61574942680651" target="_blank" aria-label="Facebook"><i class="material-icons">facebook</i></a>
                 <a href="https://www.instagram.com/mg.captures06/" target="_blank" aria-label="Instagram">
                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="custom-icon">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
@@ -382,5 +389,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById('dropdownContent');
+            dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function openFullscreenMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = 'flex';
+        }
+
+        function closeFullscreenMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = 'none';
+        }
+
+        function navigateAndClose(link) {
+            closeFullscreenMenu();
+            // Highlight the active link
+            document.querySelectorAll('.sidebarLink, .sidebarSubLink').forEach(el => el.classList.remove('active'));
+            link.classList.add('active');
+        }
+    </script>
 </body>
 </html>

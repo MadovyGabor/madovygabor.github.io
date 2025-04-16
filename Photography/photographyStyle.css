@@ -14,6 +14,7 @@ body{
 @media screen and (max-width: 480px) {
     body {
         margin: 10px; 
+        font-size: 14px; /* Reduce base font size */
     }
 }
 
@@ -238,6 +239,87 @@ header .mobileMenuIcon .material-icons {
 
 .mobileMenu .closeButton:hover {
     color: #007BFF;
+}
+
+/* Fullscreen menu styling */
+.fullscreenMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;
+}
+
+.fullscreenMenu .menuHeader {
+    display: flex;
+    justify-content: space-between; /* Align title and close button */
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    /* Removed background-color */
+}
+
+.fullscreenMenu .menuHeader h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: white;
+    background-color: #333;
+}
+
+.fullscreenMenu .closeButton {
+    font-size: 1.8em; /* Adjusted font size */
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+    /* No absolute positioning */
+}
+
+.fullscreenMenu .sidebarList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.fullscreenMenu .sidebarList li {
+    margin-bottom: 15px;
+}
+
+.fullscreenMenu .sidebarList li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fullscreenMenu .sidebarList li a:hover,
+.fullscreenMenu .sidebarList li a.active {
+    background-color: #444;
+    color: #007BFF;
+}
+
+/* Adjust font sizes for mobile devices */
+@media screen and (max-width: 480px) {
+    .fullscreenMenu .menuHeader h2 {
+        font-size: 1.5em; /* Smaller title font size */
+    }
+
+    .fullscreenMenu .sidebarList li a {
+        font-size: 1.2em; /* Smaller menu link font size */
+    }
 }
 
 /*
